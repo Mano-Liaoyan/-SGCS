@@ -12,17 +12,22 @@
 			<_id type="a">GUID 996e0459-47b5-431d-b5ec-2cb79126845d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Default</_name>
-			<_modifiedTimeWeak type="a">6.9.2023::2:41:1</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.9.2023::23:52:13</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.14.2023::19:10:41</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.14.2023::22:20:24</_modifiedTime>
 			<_lastID type="a">5</_lastID>
-			<weakCGTime type="a">6.9.2023::2:41:1</weakCGTime>
+			<weakCGTime type="a">7.14.2023::19:10:41</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_defaultComposite type="s">GUID f83b314f-d8a4-42cd-8ac6-9b7f911e305f</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
 			<_configurationRelatedTime type="a">6.9.2023::2:41:1</_configurationRelatedTime>
 			<AggregatesList type="e">
+				<value>GUID 6d4e627f-ca9a-45cc-9135-a898b2721176</value>
 				<value>GUID f83b314f-d8a4-42cd-8ac6-9b7f911e305f</value>
 			</AggregatesList>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Architecture</fileName>
+			<_id type="a">GUID 6d4e627f-ca9a-45cc-9135-a898b2721176</_id>
 		</ISubsystem>
 		<IClass type="e">
 			<_id type="a">GUID f83b314f-d8a4-42cd-8ac6-9b7f911e305f</_id>
