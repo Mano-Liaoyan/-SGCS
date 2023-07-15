@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RhapsodyArchive>
 	<MagicNumber></MagicNumber>
-	<CODE-PAGE>1252</CODE-PAGE>
+	<CODE-PAGE>936</CODE-PAGE>
 	<version>109.0</version>
 	<lang>C++</lang>
 	<BuildNo>202002261110</BuildNo>
@@ -18,7 +18,8 @@
 			<m_configActive type="r">
 				<ICodeGenConfigInfoHandle type="e">
 					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
-					<_hid type="a">GUID 65a3a3c8-688a-4d1c-9220-3b78d2719c39</_hid>
+					<_hname type="a">DefaultConfig</_hname>
+					<_hid type="a">GUID 9732516f-5785-4b4c-917c-9e5932ffd8ff</_hid>
 				</ICodeGenConfigInfoHandle>
 			</m_configActive>
 			<HandlesInMe type="c">
@@ -26,7 +27,7 @@
 					
 						<IHandle type="e">
 							<_hm2Class type="a">IProfile</_hm2Class>
-							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbsx</_hfilename>
 							<_hname type="a">SysML</_hname>
 							<_hid type="a">GUID d9689b73-885e-44c4-896b-de43defa0a33</_hid>
 						</IHandle>
@@ -34,7 +35,7 @@
 					
 						<IHandle type="e">
 							<_hm2Class type="a">IProfile</_hm2Class>
-							<_hfilename type="a">$OMROOT\Settings\MISRA\MISRAC++.sbs</_hfilename>
+							<_hfilename type="a">$OMROOT\Settings\MISRA\MISRAC++.sbsx</_hfilename>
 							<_hname type="a">MISRAC++</_hname>
 							<_hid type="a">GUID 5717d983-7bb5-4aba-bdc8-41bcb977f568</_hid>
 						</IHandle>
