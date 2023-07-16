@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
@@ -15,6 +15,14 @@
 #include <oxf.h>
 //## auto_generated
 #include <aom.h>
+class DefaultComponent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    DefaultComponent(void);
+};
+
 #endif
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\MainDefaultComponent.h

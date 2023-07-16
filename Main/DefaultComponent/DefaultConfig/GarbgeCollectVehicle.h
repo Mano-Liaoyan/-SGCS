@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: GarbgeCollectVehicle
@@ -17,6 +17,12 @@
 #include <aom.h>
 //## auto_generated
 #include "Default.h"
+//## classInstance VehicleSensors
+#include "SensorSystem.h"
+//## classInstance itsUC_RecieveDataFromSensor
+#include "UC_RecieveDataFromSensor.h"
+//## classInstance itsUC_SendDataToServer
+#include "UC_SendDataToServer.h"
 //## link itsSGCS
 class SGCS;
 
@@ -24,6 +30,10 @@ class SGCS;
 
 //## class GarbgeCollectVehicle
 class GarbgeCollectVehicle {
+#ifdef _OMINSTRUMENT
+    OM_DECLARE_COMPOSITE_OFFSET
+#endif // _OMINSTRUMENT
+
     ////    Friends    ////
     
 public :
@@ -43,10 +53,19 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
+    const SensorSystem* getVehicleSensors(void) const;
+    
+    //## auto_generated
     const SGCS* getItsSGCS(void) const;
     
     //## auto_generated
     void setItsSGCS(SGCS* const p_SGCS);
+    
+    //## auto_generated
+    const UC_RecieveDataFromSensor* getItsUC_RecieveDataFromSensor(void) const;
+    
+    //## auto_generated
+    const UC_SendDataToServer* getItsUC_SendDataToServer(void) const;
 
 protected :
 
@@ -57,7 +76,13 @@ protected :
 
 private :
 
+    SensorSystem VehicleSensors;		//## classInstance VehicleSensors
+    
     SGCS* itsSGCS;		//## link itsSGCS
+    
+    UC_RecieveDataFromSensor itsUC_RecieveDataFromSensor;		//## classInstance itsUC_RecieveDataFromSensor
+    
+    UC_SendDataToServer itsUC_SendDataToServer;		//## classInstance itsUC_SendDataToServer
     
     ////    Framework operations    ////
 

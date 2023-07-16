@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: SGCS
@@ -19,26 +19,31 @@
 #include "Default.h"
 //## auto_generated
 #include "omcollec.h"
-//## link itsCentralServer
-class CentralServer;
-
-//## link itsCloudPlatform
-class CloudPlatform;
-
-//## link itsCommunicationSystem
-class CommunicationSystem;
+//## classInstance itsCentralServer_1
+#include "CentralServer.h"
+//## classInstance itsCommunicationSystem_1
+#include "CommunicationSystem.h"
+//## classInstance itsGarbageBin_3
+#include "GarbageBin.h"
+//## classInstance itsGarbgeCollectVehicle_1
+#include "GarbgeCollectVehicle.h"
+//## link itsDevices
+class Devices;
 
 //## link itsEnviroment
 class Enviroment;
 
-//## link itsGarbageBin
-class GarbageBin;
+//## link itsGerographicInformationSystem
+class GerographicInformationSystem;
 
-//## link itsGarbgeCollectVehicle
-class GarbgeCollectVehicle;
+//## link itsRegulations
+class Regulations;
 
 //## link itsSensorSystem
 class SensorSystem;
+
+//## link itsStakeholder
+class Stakeholder;
 
 //## link itsUser
 class User;
@@ -47,6 +52,10 @@ class User;
 
 //## class SGCS
 class SGCS {
+#ifdef _OMINSTRUMENT
+    OM_DECLARE_COMPOSITE_OFFSET
+#endif // _OMINSTRUMENT
+
     ////    Friends    ////
     
 public :
@@ -72,16 +81,22 @@ public :
     void setItsCentralServer(CentralServer* const p_CentralServer);
     
     //## auto_generated
-    const CloudPlatform* getItsCloudPlatform(void) const;
-    
-    //## auto_generated
-    void setItsCloudPlatform(CloudPlatform* const p_CloudPlatform);
+    const CentralServer* getItsCentralServer_1(void) const;
     
     //## auto_generated
     const CommunicationSystem* getItsCommunicationSystem(void) const;
     
     //## auto_generated
     void setItsCommunicationSystem(CommunicationSystem* const p_CommunicationSystem);
+    
+    //## auto_generated
+    const CommunicationSystem* getItsCommunicationSystem_1(void) const;
+    
+    //## auto_generated
+    const Devices* getItsDevices(void) const;
+    
+    //## auto_generated
+    void setItsDevices(Devices* const p_Devices);
     
     //## auto_generated
     const Enviroment* getItsEnviroment(void) const;
@@ -108,16 +123,40 @@ public :
     void setItsGarbageBin_2(GarbageBin* const p_GarbageBin);
     
     //## auto_generated
+    const GarbageBin* getItsGarbageBin_3(void) const;
+    
+    //## auto_generated
     const GarbgeCollectVehicle* getItsGarbgeCollectVehicle(void) const;
     
     //## auto_generated
     void setItsGarbgeCollectVehicle(GarbgeCollectVehicle* const p_GarbgeCollectVehicle);
     
     //## auto_generated
+    const GarbgeCollectVehicle* getItsGarbgeCollectVehicle_1(void) const;
+    
+    //## auto_generated
+    const GerographicInformationSystem* getItsGerographicInformationSystem(void) const;
+    
+    //## auto_generated
+    void setItsGerographicInformationSystem(GerographicInformationSystem* const p_GerographicInformationSystem);
+    
+    //## auto_generated
+    const Regulations* getItsRegulations(void) const;
+    
+    //## auto_generated
+    void setItsRegulations(Regulations* const p_Regulations);
+    
+    //## auto_generated
     const SensorSystem* getItsSensorSystem(void) const;
     
     //## auto_generated
     void setItsSensorSystem(SensorSystem* const p_SensorSystem);
+    
+    //## auto_generated
+    const Stakeholder* getItsStakeholder(void) const;
+    
+    //## auto_generated
+    void setItsStakeholder(Stakeholder* const p_Stakeholder);
     
     //## auto_generated
     OMIterator<User*> getItsUser(void) const;
@@ -142,9 +181,13 @@ private :
 
     CentralServer* itsCentralServer;		//## link itsCentralServer
     
-    CloudPlatform* itsCloudPlatform;		//## link itsCloudPlatform
+    CentralServer itsCentralServer_1;		//## classInstance itsCentralServer_1
     
     CommunicationSystem* itsCommunicationSystem;		//## link itsCommunicationSystem
+    
+    CommunicationSystem itsCommunicationSystem_1;		//## classInstance itsCommunicationSystem_1
+    
+    Devices* itsDevices;		//## link itsDevices
     
     Enviroment* itsEnviroment;		//## link itsEnviroment
     
@@ -154,9 +197,19 @@ private :
     
     GarbageBin* itsGarbageBin_2;		//## link itsGarbageBin_2
     
+    GarbageBin itsGarbageBin_3;		//## classInstance itsGarbageBin_3
+    
     GarbgeCollectVehicle* itsGarbgeCollectVehicle;		//## link itsGarbgeCollectVehicle
     
+    GarbgeCollectVehicle itsGarbgeCollectVehicle_1;		//## classInstance itsGarbgeCollectVehicle_1
+    
+    GerographicInformationSystem* itsGerographicInformationSystem;		//## link itsGerographicInformationSystem
+    
+    Regulations* itsRegulations;		//## link itsRegulations
+    
     SensorSystem* itsSensorSystem;		//## link itsSensorSystem
+    
+    Stakeholder* itsStakeholder;		//## link itsStakeholder
     
     OMCollection<User*> itsUser;		//## link itsUser
     
@@ -174,15 +227,6 @@ public :
     void _clearItsCentralServer(void);
     
     //## auto_generated
-    void __setItsCloudPlatform(CloudPlatform* const p_CloudPlatform);
-    
-    //## auto_generated
-    void _setItsCloudPlatform(CloudPlatform* const p_CloudPlatform);
-    
-    //## auto_generated
-    void _clearItsCloudPlatform(void);
-    
-    //## auto_generated
     void __setItsCommunicationSystem(CommunicationSystem* const p_CommunicationSystem);
     
     //## auto_generated
@@ -190,6 +234,15 @@ public :
     
     //## auto_generated
     void _clearItsCommunicationSystem(void);
+    
+    //## auto_generated
+    void __setItsDevices(Devices* const p_Devices);
+    
+    //## auto_generated
+    void _setItsDevices(Devices* const p_Devices);
+    
+    //## auto_generated
+    void _clearItsDevices(void);
     
     //## auto_generated
     void __setItsEnviroment(Enviroment* const p_Enviroment);
@@ -219,6 +272,24 @@ public :
     void _clearItsGarbgeCollectVehicle(void);
     
     //## auto_generated
+    void __setItsGerographicInformationSystem(GerographicInformationSystem* const p_GerographicInformationSystem);
+    
+    //## auto_generated
+    void _setItsGerographicInformationSystem(GerographicInformationSystem* const p_GerographicInformationSystem);
+    
+    //## auto_generated
+    void _clearItsGerographicInformationSystem(void);
+    
+    //## auto_generated
+    void __setItsRegulations(Regulations* const p_Regulations);
+    
+    //## auto_generated
+    void _setItsRegulations(Regulations* const p_Regulations);
+    
+    //## auto_generated
+    void _clearItsRegulations(void);
+    
+    //## auto_generated
     void __setItsSensorSystem(SensorSystem* const p_SensorSystem);
     
     //## auto_generated
@@ -226,6 +297,15 @@ public :
     
     //## auto_generated
     void _clearItsSensorSystem(void);
+    
+    //## auto_generated
+    void __setItsStakeholder(Stakeholder* const p_Stakeholder);
+    
+    //## auto_generated
+    void _setItsStakeholder(Stakeholder* const p_Stakeholder);
+    
+    //## auto_generated
+    void _clearItsStakeholder(void);
     
     //## auto_generated
     void _addItsUser(User* const p_User);

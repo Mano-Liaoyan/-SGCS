@@ -12,10 +12,10 @@
 			<_id type="a">GUID 03d34fb8-637a-4c70-932a-bc3835731bd4</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">SGCS_USECASE</_name>
-			<_modifiedTimeWeak type="a">7.16.2023::19:55:54</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.16.2023::21:5:13</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.16.2023::21:47:22</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::21:47:22</_modifiedTime>
 			<_lastID type="a">55</_lastID>
-			<weakCGTime type="a">7.16.2023::19:55:54</weakCGTime>
+			<weakCGTime type="a">7.16.2023::21:47:22</weakCGTime>
 			<strongCGTime type="a">7.16.2023::17:15:2</strongCGTime>
 			<_defaultComposite type="s">GUID 8329836b-1fa7-4d8f-a6f9-d811fb6fdd96</_defaultComposite>
 			<_eventsBaseID type="a">30001</_eventsBaseID>
@@ -958,8 +958,8 @@
 			</_properties>
 			<_name type="a">Garbage Bin Diagram</_name>
 			<_modifiedTimeWeak type="a">7.16.2023::0:28:52</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.16.2023::20:55:4</_modifiedTime>
-			<_lastModifiedTime type="a">7.16.2023::20:55:4</_lastModifiedTime>
+			<_modifiedTime type="a">7.16.2023::21:47:22</_modifiedTime>
+			<_lastModifiedTime type="a">7.16.2023::21:47:22</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -4021,8 +4021,8 @@
 			</_properties>
 			<_name type="a">SGCS Diagram</_name>
 			<_modifiedTimeWeak type="a">7.16.2023::14:1:44</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.16.2023::20:54:42</_modifiedTime>
-			<_lastModifiedTime type="a">7.16.2023::20:54:42</_lastModifiedTime>
+			<_modifiedTime type="a">7.16.2023::21:47:22</_modifiedTime>
+			<_lastModifiedTime type="a">7.16.2023::21:47:22</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -9091,6 +9091,16 @@
 			<m_displayOption type="a">Public</m_displayOption>
 			<m_bShowInherited type="a">0</m_bShowInherited>
 			<m_bOrdered type="a">0</m_bOrdered>
+			<_itemValueOfFontPropertiesMapCount type="a">9</_itemValueOfFontPropertiesMapCount>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
 		</CGICompartment>
 		<CGIObjectInstance type="e">
 			<_id type="a">GUID ca4c3cbb-b058-49ce-8ab2-0348014303f3</_id>
@@ -9647,6 +9657,16 @@
 			<m_displayOption type="a">Public</m_displayOption>
 			<m_bShowInherited type="a">0</m_bShowInherited>
 			<m_bOrdered type="a">0</m_bOrdered>
+			<_itemValueOfFontPropertiesMapCount type="a">9</_itemValueOfFontPropertiesMapCount>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
 		</CGICompartment>
 		<CGIObjectInstance type="e">
 			<_id type="a">GUID dc41983a-2913-4d0a-bf7a-4184e954d381</_id>
@@ -9783,6 +9803,16 @@
 			<m_displayOption type="a">Public</m_displayOption>
 			<m_bShowInherited type="a">0</m_bShowInherited>
 			<m_bOrdered type="a">0</m_bOrdered>
+			<_itemValueOfFontPropertiesMapCount type="a">9</_itemValueOfFontPropertiesMapCount>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
 		</CGICompartment>
 		<IDiagram type="e">
 			<_id type="a">GUID e6f93e0c-7b12-47de-9dac-a6615e66a1b1</_id>
@@ -10300,6 +10330,16 @@
 			<m_displayOption type="a">All</m_displayOption>
 			<m_bShowInherited type="a">0</m_bShowInherited>
 			<m_bOrdered type="a">0</m_bOrdered>
+			<_itemValueOfFontPropertiesMapCount type="a">9</_itemValueOfFontPropertiesMapCount>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
 		</CGICompartment>
 		<CGIClass type="e">
 			<_id type="a">GUID 05e0698b-a4b7-4bcc-97b3-09844fa07b54</_id>
@@ -10481,9 +10521,9 @@
 			<_id type="a">GUID 8329836b-1fa7-4d8f-a6f9-d811fb6fdd96</_id>
 			<_myState type="a">40960</_myState>
 			<_name type="a">TopLevel</_name>
-			<_modifiedTimeWeak type="a">7.16.2023::17:27:15</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.16.2023::17:27:15</_modifiedTime>
-			<weakCGTime type="a">7.16.2023::17:27:15</weakCGTime>
+			<_modifiedTimeWeak type="a">7.16.2023::21:45:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::21:45:38</_modifiedTime>
+			<weakCGTime type="a">7.16.2023::21:45:38</weakCGTime>
 			<strongCGTime type="a">7.16.2023::0:28:52</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -10538,16 +10578,16 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">7.16.2023::18:36:40</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">7.16.2023::21:45:38</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID e6f93e0c-7b12-47de-9dac-a6615e66a1b1</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">7.16.2023::18:36:40</_modifiedTime>
+			<_modifiedTime type="a">7.16.2023::21:45:38</_modifiedTime>
 			<_lastID type="a">10</_lastID>
-			<weakCGTime type="a">7.16.2023::18:36:40</weakCGTime>
+			<weakCGTime type="a">7.16.2023::21:45:38</weakCGTime>
 			<strongCGTime type="a">7.16.2023::14:35:26</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -13055,16 +13095,16 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">7.16.2023::18:36:40</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">7.16.2023::21:45:38</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID e6f93e0c-7b12-47de-9dac-a6615e66a1b1</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">7.16.2023::18:36:40</_modifiedTime>
+			<_modifiedTime type="a">7.16.2023::21:45:38</_modifiedTime>
 			<_lastID type="a">6</_lastID>
-			<weakCGTime type="a">7.16.2023::18:36:40</weakCGTime>
+			<weakCGTime type="a">7.16.2023::21:45:38</weakCGTime>
 			<strongCGTime type="a">7.16.2023::13:4:24</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -14985,16 +15025,16 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">7.16.2023::18:54:21</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">7.16.2023::21:45:38</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID 31a6e21d-5512-46a4-82f5-8dd31fc4f263</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">7.16.2023::18:53:39</_modifiedTime>
+			<_modifiedTime type="a">7.16.2023::21:45:38</_modifiedTime>
 			<_lastID type="a">6</_lastID>
-			<weakCGTime type="a">7.16.2023::18:54:21</weakCGTime>
+			<weakCGTime type="a">7.16.2023::21:45:38</weakCGTime>
 			<strongCGTime type="a">7.16.2023::14:56:18</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -15262,7 +15302,7 @@ std::cout &lt;&lt; volume &lt;&lt; &quot; &quot; &lt;&lt; recyclable &lt;&lt; st
 			<_id type="a">GUID d40a7a2d-4f1c-417d-ae78-ef10b57931d6</_id>
 			<_myState type="a">8192</_myState>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -15542,7 +15582,7 @@ std::cout &lt;&lt; volume &lt;&lt; &quot; &quot; &lt;&lt; recyclable &lt;&lt; st
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<_defNumber type="a">37</_defNumber>
-			<_version type="a">7.16.2023::20:54:24</_version>
+			<_version type="a">7.16.2023::23:47:56</_version>
 			<_baseVersion type="a">1.2.1990::0:0:0</_baseVersion>
 			<_diagram type="s">GUID e5d24d7e-21f2-4464-bbcd-4fdaeb353caf</_diagram>
 			<AggregatesList type="e">
@@ -15916,13 +15956,13 @@ std::cout &lt;&lt; volume &lt;&lt; &quot; &quot; &lt;&lt; recyclable &lt;&lt; st
 			<_staticReaction type="a">0</_staticReaction>
 			<_itsSource type="s">GUID 01b2d217-594f-4604-8010-391bea6644ee</_itsSource>
 			<AggregatesList type="e">
-				<value>GUID 1c40994c-96ac-4194-b8db-5fe4e0d2004e</value>
+				<value>GUID 3789ab3f-083f-4544-928b-685fd18a5bb8</value>
 			</AggregatesList>
 		</ITransition>
 		<ILabel type="e">
-			<_id type="a">GUID 1c40994c-96ac-4194-b8db-5fe4e0d2004e</_id>
+			<_id type="a">GUID 3789ab3f-083f-4544-928b-685fd18a5bb8</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
 			<_itsTrigger>NULL</_itsTrigger>
 			<_itsGuard>NULL</_itsGuard>
 			<_itsAction>NULL</_itsAction>
@@ -23836,8 +23876,8 @@ setNonRecyclableBin(0);</m_str>
 			<_id type="a">GUID bbf190c5-6ddd-4e62-8b7d-eeb8f2c9c711</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">evStartLittering</_name>
-			<_modifiedTimeWeak type="a">7.16.2023::14:58:9</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.16.2023::14:58:9</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.16.2023::21:45:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::21:45:38</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
@@ -23849,8 +23889,8 @@ setNonRecyclableBin(0);</m_str>
 			<_id type="a">GUID 042e3b0b-d50a-4a55-a3fe-e776ce2b4e07</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">evStartSorting</_name>
-			<_modifiedTimeWeak type="a">7.16.2023::18:9:59</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.16.2023::18:9:59</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.16.2023::21:45:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::21:45:38</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
@@ -23862,8 +23902,8 @@ setNonRecyclableBin(0);</m_str>
 			<_id type="a">GUID 0986ae59-606e-4608-9062-73e0a0337cea</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">evLitterGenerated</_name>
-			<_modifiedTimeWeak type="a">7.16.2023::15:15:55</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.16.2023::15:15:55</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.16.2023::21:45:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::21:45:38</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -23874,8 +23914,8 @@ setNonRecyclableBin(0);</m_str>
 			<_id type="a">GUID 4647aca7-f56d-47c2-bcd9-9e8472904b6e</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">evOverfill</_name>
-			<_modifiedTimeWeak type="a">7.16.2023::18:33:24</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.16.2023::18:33:24</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.16.2023::21:45:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::21:45:38</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -24802,9 +24842,9 @@ setNonRecyclableBin(0);</m_str>
 			<_id type="a">GUID 0fab15a7-07f6-4209-bea6-f2390bcf365f</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">SystemManager</_name>
-			<_modifiedTimeWeak type="a">7.16.2023::17:21:23</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.16.2023::17:21:23</_modifiedTime>
-			<weakCGTime type="a">7.16.2023::17:21:23</weakCGTime>
+			<_modifiedTimeWeak type="a">7.16.2023::21:45:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::21:45:38</_modifiedTime>
+			<weakCGTime type="a">7.16.2023::21:45:38</weakCGTime>
 			<strongCGTime type="a">7.16.2023::0:28:52</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -24855,7 +24895,7 @@ setNonRecyclableBin(0);</m_str>
 			<_id type="a">GUID e9d78908-3b09-437a-b0f3-78601a044c72</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">User</_name>
-			<_modifiedTimeWeak type="a">7.16.2023::0:30:52</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">7.16.2023::21:45:38</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
@@ -24863,8 +24903,8 @@ setNonRecyclableBin(0);</m_str>
 					<_hid type="a">GUID eeeaf1b4-fdde-4b79-88b9-e7543c49e340</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">7.16.2023::0:30:52</_modifiedTime>
-			<weakCGTime type="a">7.16.2023::0:30:52</weakCGTime>
+			<_modifiedTime type="a">7.16.2023::21:45:38</_modifiedTime>
+			<weakCGTime type="a">7.16.2023::21:45:38</weakCGTime>
 			<strongCGTime type="a">7.16.2023::0:29:44</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">

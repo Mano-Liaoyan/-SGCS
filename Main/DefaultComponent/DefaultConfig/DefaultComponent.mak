@@ -87,13 +87,39 @@ ADDITIONAL_OBJS=
 OBJS= \
   SGCS.obj \
   CommunicationSystem.obj \
-  CloudPlatform.obj \
   CentralServer.obj \
   GarbageBin.obj \
   Enviroment.obj \
   GarbgeCollectVehicle.obj \
   SensorSystem.obj \
   Garbage.obj \
+  Notification.obj \
+  Stakeholder.obj \
+  GovernmentOfficers.obj \
+  Devices.obj \
+  Smartphone.obj \
+  Computer.obj \
+  GerographicInformationSystem.obj \
+  Regulations.obj \
+  GovernWasteManagement.obj \
+  EnvironmentalProtection.obj \
+  RecieveData.obj \
+  UC_ManageData.obj \
+  UC_ProcessingData.obj \
+  UC_OpetimizeRoute.obj \
+  UC_MonitorDataUsingMobileApp.obj \
+  UC_MonitorDashBoard.obj \
+  StoringData.obj \
+  GarbageTank.obj \
+  HumiditySensor.obj \
+  TemperatureSensor.obj \
+  Battery.obj \
+  FillLevelSensor.obj \
+  WIFIBlock.obj \
+  GPSTracker.obj \
+  UC_RecieveDataFromSensor.obj \
+  UC_SendDataToServer.obj \
+  SortingMechanism.obj \
   UC_MonitorFillLevel.obj \
   UC_SortGarbage.obj \
   UC_Littering.obj \
@@ -183,31 +209,25 @@ SOCK_LIB=
 
 
 
-SGCS.obj : SGCS.cpp SGCS.h    Default.h Enviroment.h CommunicationSystem.h CentralServer.h CloudPlatform.h GarbageBin.h GarbgeCollectVehicle.h SensorSystem.h User.h 
+SGCS.obj : SGCS.cpp SGCS.h    Default.h Enviroment.h CommunicationSystem.h CentralServer.h GarbageBin.h GarbgeCollectVehicle.h SensorSystem.h User.h Stakeholder.h Devices.h GerographicInformationSystem.h Regulations.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"SGCS.obj" "SGCS.cpp" 
 
 
 
-CommunicationSystem.obj : CommunicationSystem.cpp CommunicationSystem.h    Default.h SGCS.h 
+CommunicationSystem.obj : CommunicationSystem.cpp CommunicationSystem.h    Default.h SGCS.h Notification.h UC_RecieveDataFromSensor.h UC_SendDataToServer.h SensorSystem.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CommunicationSystem.obj" "CommunicationSystem.cpp" 
 
 
 
-CloudPlatform.obj : CloudPlatform.cpp CloudPlatform.h    Default.h SGCS.h CentralServer.h 
-	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CloudPlatform.obj" "CloudPlatform.cpp" 
-
-
-
-CentralServer.obj : CentralServer.cpp CentralServer.h    Default.h SGCS.h CloudPlatform.h 
+CentralServer.obj : CentralServer.cpp CentralServer.h    Default.h SGCS.h Notification.h RecieveData.h UC_ManageData.h UC_ProcessingData.h UC_OpetimizeRoute.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CentralServer.obj" "CentralServer.cpp" 
 
 
 
-GarbageBin.obj : GarbageBin.cpp GarbageBin.h    Default.h SGCS.h 
+GarbageBin.obj : GarbageBin.cpp GarbageBin.h    Default.h SGCS.h SensorSystem.h GarbageTank.h SortingMechanism.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"GarbageBin.obj" "GarbageBin.cpp" 
 
@@ -219,13 +239,13 @@ Enviroment.obj : Enviroment.cpp Enviroment.h    Default.h SGCS.h UC_Littering.h 
 
 
 
-GarbgeCollectVehicle.obj : GarbgeCollectVehicle.cpp GarbgeCollectVehicle.h    Default.h SGCS.h 
+GarbgeCollectVehicle.obj : GarbgeCollectVehicle.cpp GarbgeCollectVehicle.h    Default.h SGCS.h SensorSystem.h UC_RecieveDataFromSensor.h UC_SendDataToServer.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"GarbgeCollectVehicle.obj" "GarbgeCollectVehicle.cpp" 
 
 
 
-SensorSystem.obj : SensorSystem.cpp SensorSystem.h    Default.h SGCS.h 
+SensorSystem.obj : SensorSystem.cpp SensorSystem.h    Default.h SGCS.h WIFIBlock.h HumiditySensor.h TemperatureSensor.h Battery.h FillLevelSensor.h GPSTracker.h CommunicationSystem.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"SensorSystem.obj" "SensorSystem.cpp" 
 
@@ -234,6 +254,168 @@ SensorSystem.obj : SensorSystem.cpp SensorSystem.h    Default.h SGCS.h
 Garbage.obj : Garbage.cpp Garbage.h    Default.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Garbage.obj" "Garbage.cpp" 
+
+
+
+Notification.obj : Notification.cpp Notification.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Notification.obj" "Notification.cpp" 
+
+
+
+Stakeholder.obj : Stakeholder.cpp Stakeholder.h    Default.h SGCS.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Stakeholder.obj" "Stakeholder.cpp" 
+
+
+
+GovernmentOfficers.obj : GovernmentOfficers.cpp GovernmentOfficers.h    Default.h Stakeholder.h SGCS.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"GovernmentOfficers.obj" "GovernmentOfficers.cpp" 
+
+
+
+Devices.obj : Devices.cpp Devices.h    Default.h SGCS.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Devices.obj" "Devices.cpp" 
+
+
+
+Smartphone.obj : Smartphone.cpp Smartphone.h    Default.h Devices.h SGCS.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Smartphone.obj" "Smartphone.cpp" 
+
+
+
+Computer.obj : Computer.cpp Computer.h    Default.h Devices.h SGCS.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Computer.obj" "Computer.cpp" 
+
+
+
+GerographicInformationSystem.obj : GerographicInformationSystem.cpp GerographicInformationSystem.h    Default.h SGCS.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"GerographicInformationSystem.obj" "GerographicInformationSystem.cpp" 
+
+
+
+Regulations.obj : Regulations.cpp Regulations.h    Default.h SGCS.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Regulations.obj" "Regulations.cpp" 
+
+
+
+GovernWasteManagement.obj : GovernWasteManagement.cpp GovernWasteManagement.h    Default.h Regulations.h SGCS.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"GovernWasteManagement.obj" "GovernWasteManagement.cpp" 
+
+
+
+EnvironmentalProtection.obj : EnvironmentalProtection.cpp EnvironmentalProtection.h    Default.h Regulations.h SGCS.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"EnvironmentalProtection.obj" "EnvironmentalProtection.cpp" 
+
+
+
+RecieveData.obj : RecieveData.cpp RecieveData.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"RecieveData.obj" "RecieveData.cpp" 
+
+
+
+UC_ManageData.obj : UC_ManageData.cpp UC_ManageData.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UC_ManageData.obj" "UC_ManageData.cpp" 
+
+
+
+UC_ProcessingData.obj : UC_ProcessingData.cpp UC_ProcessingData.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UC_ProcessingData.obj" "UC_ProcessingData.cpp" 
+
+
+
+UC_OpetimizeRoute.obj : UC_OpetimizeRoute.cpp UC_OpetimizeRoute.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UC_OpetimizeRoute.obj" "UC_OpetimizeRoute.cpp" 
+
+
+
+UC_MonitorDataUsingMobileApp.obj : UC_MonitorDataUsingMobileApp.cpp UC_MonitorDataUsingMobileApp.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UC_MonitorDataUsingMobileApp.obj" "UC_MonitorDataUsingMobileApp.cpp" 
+
+
+
+UC_MonitorDashBoard.obj : UC_MonitorDashBoard.cpp UC_MonitorDashBoard.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UC_MonitorDashBoard.obj" "UC_MonitorDashBoard.cpp" 
+
+
+
+StoringData.obj : StoringData.cpp StoringData.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"StoringData.obj" "StoringData.cpp" 
+
+
+
+GarbageTank.obj : GarbageTank.cpp GarbageTank.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"GarbageTank.obj" "GarbageTank.cpp" 
+
+
+
+HumiditySensor.obj : HumiditySensor.cpp HumiditySensor.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"HumiditySensor.obj" "HumiditySensor.cpp" 
+
+
+
+TemperatureSensor.obj : TemperatureSensor.cpp TemperatureSensor.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TemperatureSensor.obj" "TemperatureSensor.cpp" 
+
+
+
+Battery.obj : Battery.cpp Battery.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Battery.obj" "Battery.cpp" 
+
+
+
+FillLevelSensor.obj : FillLevelSensor.cpp FillLevelSensor.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"FillLevelSensor.obj" "FillLevelSensor.cpp" 
+
+
+
+WIFIBlock.obj : WIFIBlock.cpp WIFIBlock.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"WIFIBlock.obj" "WIFIBlock.cpp" 
+
+
+
+GPSTracker.obj : GPSTracker.cpp GPSTracker.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"GPSTracker.obj" "GPSTracker.cpp" 
+
+
+
+UC_RecieveDataFromSensor.obj : UC_RecieveDataFromSensor.cpp UC_RecieveDataFromSensor.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UC_RecieveDataFromSensor.obj" "UC_RecieveDataFromSensor.cpp" 
+
+
+
+UC_SendDataToServer.obj : UC_SendDataToServer.cpp UC_SendDataToServer.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UC_SendDataToServer.obj" "UC_SendDataToServer.cpp" 
+
+
+
+SortingMechanism.obj : SortingMechanism.cpp SortingMechanism.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"SortingMechanism.obj" "SortingMechanism.cpp" 
 
 
 
@@ -267,7 +449,7 @@ User.obj : User.cpp User.h    SGCS_USECASE.h SGCS.h
 
 
 
-Default.obj : Default.cpp Default.h    SGCS.h CommunicationSystem.h CloudPlatform.h CentralServer.h GarbageBin.h Enviroment.h GarbgeCollectVehicle.h SensorSystem.h Garbage.h 
+Default.obj : Default.cpp Default.h    SGCS.h CommunicationSystem.h CentralServer.h GarbageBin.h Enviroment.h GarbgeCollectVehicle.h SensorSystem.h Garbage.h Notification.h Stakeholder.h GovernmentOfficers.h Devices.h Smartphone.h Computer.h GerographicInformationSystem.h Regulations.h GovernWasteManagement.h EnvironmentalProtection.h RecieveData.h UC_ManageData.h UC_ProcessingData.h UC_OpetimizeRoute.h UC_MonitorDataUsingMobileApp.h UC_MonitorDashBoard.h StoringData.h GarbageTank.h HumiditySensor.h TemperatureSensor.h Battery.h FillLevelSensor.h WIFIBlock.h GPSTracker.h UC_RecieveDataFromSensor.h UC_SendDataToServer.h SortingMechanism.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Default.obj" "Default.cpp" 
 
@@ -308,13 +490,39 @@ clean:
 	@echo Cleanup
 	if exist SGCS.obj erase SGCS.obj
 	if exist CommunicationSystem.obj erase CommunicationSystem.obj
-	if exist CloudPlatform.obj erase CloudPlatform.obj
 	if exist CentralServer.obj erase CentralServer.obj
 	if exist GarbageBin.obj erase GarbageBin.obj
 	if exist Enviroment.obj erase Enviroment.obj
 	if exist GarbgeCollectVehicle.obj erase GarbgeCollectVehicle.obj
 	if exist SensorSystem.obj erase SensorSystem.obj
 	if exist Garbage.obj erase Garbage.obj
+	if exist Notification.obj erase Notification.obj
+	if exist Stakeholder.obj erase Stakeholder.obj
+	if exist GovernmentOfficers.obj erase GovernmentOfficers.obj
+	if exist Devices.obj erase Devices.obj
+	if exist Smartphone.obj erase Smartphone.obj
+	if exist Computer.obj erase Computer.obj
+	if exist GerographicInformationSystem.obj erase GerographicInformationSystem.obj
+	if exist Regulations.obj erase Regulations.obj
+	if exist GovernWasteManagement.obj erase GovernWasteManagement.obj
+	if exist EnvironmentalProtection.obj erase EnvironmentalProtection.obj
+	if exist RecieveData.obj erase RecieveData.obj
+	if exist UC_ManageData.obj erase UC_ManageData.obj
+	if exist UC_ProcessingData.obj erase UC_ProcessingData.obj
+	if exist UC_OpetimizeRoute.obj erase UC_OpetimizeRoute.obj
+	if exist UC_MonitorDataUsingMobileApp.obj erase UC_MonitorDataUsingMobileApp.obj
+	if exist UC_MonitorDashBoard.obj erase UC_MonitorDashBoard.obj
+	if exist StoringData.obj erase StoringData.obj
+	if exist GarbageTank.obj erase GarbageTank.obj
+	if exist HumiditySensor.obj erase HumiditySensor.obj
+	if exist TemperatureSensor.obj erase TemperatureSensor.obj
+	if exist Battery.obj erase Battery.obj
+	if exist FillLevelSensor.obj erase FillLevelSensor.obj
+	if exist WIFIBlock.obj erase WIFIBlock.obj
+	if exist GPSTracker.obj erase GPSTracker.obj
+	if exist UC_RecieveDataFromSensor.obj erase UC_RecieveDataFromSensor.obj
+	if exist UC_SendDataToServer.obj erase UC_SendDataToServer.obj
+	if exist SortingMechanism.obj erase SortingMechanism.obj
 	if exist UC_MonitorFillLevel.obj erase UC_MonitorFillLevel.obj
 	if exist UC_SortGarbage.obj erase UC_SortGarbage.obj
 	if exist UC_Littering.obj erase UC_Littering.obj

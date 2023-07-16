@@ -1,6 +1,6 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: GarbageBin
@@ -32,6 +32,14 @@ GarbageBin::~GarbageBin(void) {
     cleanUpRelations();
 }
 
+const SensorSystem* GarbageBin::getGarbagebinsensors(void) const {
+    return &Garbagebinsensors;
+}
+
+const GarbageTank* GarbageBin::getItsGarbageTank(void) const {
+    return &itsGarbageTank;
+}
+
 const SGCS* GarbageBin::getItsSGCS(void) const {
     return itsSGCS;
 }
@@ -42,6 +50,10 @@ void GarbageBin::setItsSGCS(SGCS* const p_SGCS) {
             p_SGCS->_setItsGarbageBin(this);
         }
     _setItsSGCS(p_SGCS);
+}
+
+const SortingMechanism* GarbageBin::getItsSortingMechanism(void) const {
+    return &itsSortingMechanism;
 }
 
 void GarbageBin::cleanUpRelations(void) {
@@ -90,6 +102,12 @@ void OMAnimatedGarbageBin::serializeRelations(AOMSRelations* aomsRelations) cons
         {
             aomsRelations->ADD_ITEM(myReal->itsSGCS);
         }
+    aomsRelations->addRelation("Garbagebinsensors", true, true);
+    aomsRelations->ADD_ITEM(&myReal->Garbagebinsensors);
+    aomsRelations->addRelation("itsGarbageTank", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsGarbageTank);
+    aomsRelations->addRelation("itsSortingMechanism", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsSortingMechanism);
 }
 //#]
 

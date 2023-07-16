@@ -1,6 +1,6 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CentralServer
@@ -14,8 +14,6 @@
 
 //## auto_generated
 #include "CentralServer.h"
-//## link itsCloudPlatform
-#include "CloudPlatform.h"
 //## link itsSGCS
 #include "SGCS.h"
 //#[ ignore
@@ -25,7 +23,7 @@
 //## package Default
 
 //## class CentralServer
-CentralServer::CentralServer(void) : itsCloudPlatform(NULL), itsSGCS(NULL) {
+CentralServer::CentralServer(void) : binfilllevel(0), locationX(0.0), locationY(0.0), itsSGCS(NULL) {
     NOTIFY_CONSTRUCTOR(CentralServer, CentralServer(), 0, Default_CentralServer_CentralServer_SERIALIZE);
 }
 
@@ -34,16 +32,36 @@ CentralServer::~CentralServer(void) {
     cleanUpRelations();
 }
 
-const CloudPlatform* CentralServer::getItsCloudPlatform(void) const {
-    return itsCloudPlatform;
+const float CentralServer::getBinfilllevel(void) const {
+    return binfilllevel;
 }
 
-void CentralServer::setItsCloudPlatform(CloudPlatform* const p_CloudPlatform) {
-    if(p_CloudPlatform != NULL)
-        {
-            p_CloudPlatform->_setItsCentralServer(this);
-        }
-    _setItsCloudPlatform(p_CloudPlatform);
+void CentralServer::setBinfilllevel(const float p_binfilllevel) {
+    binfilllevel = p_binfilllevel;
+}
+
+const float CentralServer::getLocationX(void) const {
+    return locationX;
+}
+
+void CentralServer::setLocationX(const float p_locationX) {
+    locationX = p_locationX;
+}
+
+const float CentralServer::getLocationY(void) const {
+    return locationY;
+}
+
+void CentralServer::setLocationY(const float p_locationY) {
+    locationY = p_locationY;
+}
+
+const Notification* CentralServer::getItsNotification(void) const {
+    return &itsNotification;
+}
+
+const RecieveData* CentralServer::getItsRecieveData(void) const {
+    return &itsRecieveData;
 }
 
 const SGCS* CentralServer::getItsSGCS(void) const {
@@ -58,17 +76,19 @@ void CentralServer::setItsSGCS(SGCS* const p_SGCS) {
     _setItsSGCS(p_SGCS);
 }
 
+const UC_ManageData* CentralServer::getItsUC_ManageData(void) const {
+    return &itsUC_ManageData;
+}
+
+const UC_OpetimizeRoute* CentralServer::getItsUC_OpetimizeRoute(void) const {
+    return &itsUC_OpetimizeRoute;
+}
+
+const UC_ProcessingData* CentralServer::getItsUC_ProcessingData(void) const {
+    return &itsUC_ProcessingData;
+}
+
 void CentralServer::cleanUpRelations(void) {
-    if(itsCloudPlatform != NULL)
-        {
-            NOTIFY_RELATION_CLEARED("itsCloudPlatform");
-            const CentralServer* p_CentralServer = itsCloudPlatform->getItsCentralServer();
-            if(p_CentralServer != NULL)
-                {
-                    itsCloudPlatform->__setItsCentralServer(NULL);
-                }
-            itsCloudPlatform = NULL;
-        }
     if(itsSGCS != NULL)
         {
             NOTIFY_RELATION_CLEARED("itsSGCS");
@@ -79,31 +99,6 @@ void CentralServer::cleanUpRelations(void) {
                 }
             itsSGCS = NULL;
         }
-}
-
-void CentralServer::__setItsCloudPlatform(CloudPlatform* const p_CloudPlatform) {
-    itsCloudPlatform = p_CloudPlatform;
-    if(p_CloudPlatform != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsCloudPlatform", p_CloudPlatform, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsCloudPlatform");
-        }
-}
-
-void CentralServer::_setItsCloudPlatform(CloudPlatform* const p_CloudPlatform) {
-    if(itsCloudPlatform != NULL)
-        {
-            itsCloudPlatform->__setItsCentralServer(NULL);
-        }
-    __setItsCloudPlatform(p_CloudPlatform);
-}
-
-void CentralServer::_clearItsCloudPlatform(void) {
-    NOTIFY_RELATION_CLEARED("itsCloudPlatform");
-    itsCloudPlatform = NULL;
 }
 
 void CentralServer::__setItsSGCS(SGCS* const p_SGCS) {
@@ -133,17 +128,28 @@ void CentralServer::_clearItsSGCS(void) {
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
+void OMAnimatedCentralServer::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("binfilllevel", x2String(myReal->binfilllevel));
+    aomsAttributes->addAttribute("locationX", x2String(myReal->locationX));
+    aomsAttributes->addAttribute("locationY", x2String(myReal->locationY));
+}
+
 void OMAnimatedCentralServer::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsSGCS", false, true);
     if(myReal->itsSGCS)
         {
             aomsRelations->ADD_ITEM(myReal->itsSGCS);
         }
-    aomsRelations->addRelation("itsCloudPlatform", false, true);
-    if(myReal->itsCloudPlatform)
-        {
-            aomsRelations->ADD_ITEM(myReal->itsCloudPlatform);
-        }
+    aomsRelations->addRelation("itsNotification", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsNotification);
+    aomsRelations->addRelation("itsRecieveData", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsRecieveData);
+    aomsRelations->addRelation("itsUC_ManageData", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsUC_ManageData);
+    aomsRelations->addRelation("itsUC_ProcessingData", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsUC_ProcessingData);
+    aomsRelations->addRelation("itsUC_OpetimizeRoute", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsUC_OpetimizeRoute);
 }
 //#]
 

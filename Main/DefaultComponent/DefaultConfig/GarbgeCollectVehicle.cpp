@@ -1,6 +1,6 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: GarbgeCollectVehicle
@@ -32,6 +32,10 @@ GarbgeCollectVehicle::~GarbgeCollectVehicle(void) {
     cleanUpRelations();
 }
 
+const SensorSystem* GarbgeCollectVehicle::getVehicleSensors(void) const {
+    return &VehicleSensors;
+}
+
 const SGCS* GarbgeCollectVehicle::getItsSGCS(void) const {
     return itsSGCS;
 }
@@ -42,6 +46,14 @@ void GarbgeCollectVehicle::setItsSGCS(SGCS* const p_SGCS) {
             p_SGCS->_setItsGarbgeCollectVehicle(this);
         }
     _setItsSGCS(p_SGCS);
+}
+
+const UC_RecieveDataFromSensor* GarbgeCollectVehicle::getItsUC_RecieveDataFromSensor(void) const {
+    return &itsUC_RecieveDataFromSensor;
+}
+
+const UC_SendDataToServer* GarbgeCollectVehicle::getItsUC_SendDataToServer(void) const {
+    return &itsUC_SendDataToServer;
 }
 
 void GarbgeCollectVehicle::cleanUpRelations(void) {
@@ -90,6 +102,12 @@ void OMAnimatedGarbgeCollectVehicle::serializeRelations(AOMSRelations* aomsRelat
         {
             aomsRelations->ADD_ITEM(myReal->itsSGCS);
         }
+    aomsRelations->addRelation("VehicleSensors", true, true);
+    aomsRelations->ADD_ITEM(&myReal->VehicleSensors);
+    aomsRelations->addRelation("itsUC_RecieveDataFromSensor", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsUC_RecieveDataFromSensor);
+    aomsRelations->addRelation("itsUC_SendDataToServer", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsUC_SendDataToServer);
 }
 //#]
 

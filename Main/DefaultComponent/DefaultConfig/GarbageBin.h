@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: GarbageBin
@@ -17,6 +17,12 @@
 #include <aom.h>
 //## auto_generated
 #include "Default.h"
+//## classInstance itsGarbageTank
+#include "GarbageTank.h"
+//## classInstance Garbagebinsensors
+#include "SensorSystem.h"
+//## classInstance itsSortingMechanism
+#include "SortingMechanism.h"
 //## link itsSGCS
 class SGCS;
 
@@ -24,6 +30,10 @@ class SGCS;
 
 //## class GarbageBin
 class GarbageBin {
+#ifdef _OMINSTRUMENT
+    OM_DECLARE_COMPOSITE_OFFSET
+#endif // _OMINSTRUMENT
+
     ////    Friends    ////
     
 public :
@@ -43,10 +53,19 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
+    const SensorSystem* getGarbagebinsensors(void) const;
+    
+    //## auto_generated
+    const GarbageTank* getItsGarbageTank(void) const;
+    
+    //## auto_generated
     const SGCS* getItsSGCS(void) const;
     
     //## auto_generated
     void setItsSGCS(SGCS* const p_SGCS);
+    
+    //## auto_generated
+    const SortingMechanism* getItsSortingMechanism(void) const;
 
 protected :
 
@@ -57,7 +76,13 @@ protected :
 
 private :
 
+    SensorSystem Garbagebinsensors;		//## classInstance Garbagebinsensors
+    
+    GarbageTank itsGarbageTank;		//## classInstance itsGarbageTank
+    
     SGCS* itsSGCS;		//## link itsSGCS
+    
+    SortingMechanism itsSortingMechanism;		//## classInstance itsSortingMechanism
     
     ////    Framework operations    ////
 

@@ -1,39 +1,104 @@
 I-Logix-RPY-Archive version 8.15.0 * 202002261110
 
 - m_fileModifyTime = { IRPYRawContainer 
-	- size = 32;
-	- value = "DefaultComponent\\DefaultConfig\\CentralServer.cpp" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\CentralServer.h" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\CloudPlatform.cpp" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\CloudPlatform.h" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\CommunicationSystem.cpp" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\CommunicationSystem.h" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\Default.cpp" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\Default.h" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\Enviroment.cpp" 7.16.2023::15:30:17
-	"DefaultComponent\\DefaultConfig\\Enviroment.h" 7.16.2023::15:30:17
-	"DefaultComponent\\DefaultConfig\\Garbage.cpp" 7.16.2023::0:32:40
-	"DefaultComponent\\DefaultConfig\\Garbage.h" 7.16.2023::0:32:40
-	"DefaultComponent\\DefaultConfig\\GarbageBin.cpp" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\GarbageBin.h" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\GarbgeCollectVehicle.cpp" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\GarbgeCollectVehicle.h" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\SGCS.cpp" 7.16.2023::0:31:50
-	"DefaultComponent\\DefaultConfig\\SGCS.h" 7.16.2023::0:27:16
-	"DefaultComponent\\DefaultConfig\\SGCS_USECASE.cpp" 7.16.2023::18:42:53
-	"DefaultComponent\\DefaultConfig\\SGCS_USECASE.h" 7.16.2023::18:42:53
-	"DefaultComponent\\DefaultConfig\\SensorSystem.cpp" 7.16.2023::0:23:34
-	"DefaultComponent\\DefaultConfig\\SensorSystem.h" 7.16.2023::0:23:34
-	"DefaultComponent\\DefaultConfig\\SystemManager.cpp" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\SystemManager.h" 7.16.2023::0:22:49
-	"DefaultComponent\\DefaultConfig\\UC_Littering.cpp" 7.16.2023::18:54:24
-	"DefaultComponent\\DefaultConfig\\UC_Littering.h" 7.16.2023::18:54:24
-	"DefaultComponent\\DefaultConfig\\UC_MonitorFillLevel.cpp" 7.16.2023::18:20:46
-	"DefaultComponent\\DefaultConfig\\UC_MonitorFillLevel.h" 7.16.2023::18:19:52
-	"DefaultComponent\\DefaultConfig\\UC_SortGarbage.cpp" 7.16.2023::18:21:33
-	"DefaultComponent\\DefaultConfig\\UC_SortGarbage.h" 7.16.2023::18:21:11
-	"DefaultComponent\\DefaultConfig\\User.cpp" 7.16.2023::0:31:50
-	"DefaultComponent\\DefaultConfig\\User.h" 7.16.2023::0:31:50
+	- size = 97;
+	- value = "DefaultComponent\\DefaultConfig\\Battery.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\Battery.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\CentralServer.cpp" 7.16.2023::21:47:56
+	"DefaultComponent\\DefaultConfig\\CentralServer.h" 7.16.2023::21:47:56
+	"DefaultComponent\\DefaultConfig\\CloudPlatform.cpp" 7.16.2023::21:47:24
+	"DefaultComponent\\DefaultConfig\\CloudPlatform.h" 7.16.2023::21:47:24
+	"DefaultComponent\\DefaultConfig\\CommunicationSystem.cpp" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\CommunicationSystem.h" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\Computer.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\Computer.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\Default.cpp" 7.16.2023::21:47:56
+	"DefaultComponent\\DefaultConfig\\Default.h" 7.16.2023::21:47:56
+	"DefaultComponent\\DefaultConfig\\Devices.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\Devices.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\Enviroment.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\Enviroment.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\EnvironmentalProtection.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\EnvironmentalProtection.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\FillLevelSensor.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\FillLevelSensor.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\GPSTracker.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\GPSTracker.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\Garbage.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\Garbage.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\GarbageBin.cpp" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\GarbageBin.h" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\GarbageTank.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\GarbageTank.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\GarbgeCollectVehicle.cpp" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\GarbgeCollectVehicle.h" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\GerographicInformationSystem.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\GerographicInformationSystem.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\GovernWasteManagement.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\GovernWasteManagement.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\GovernmentOfficers.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\GovernmentOfficers.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\HumiditySensor.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\HumiditySensor.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\Notification.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\Notification.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\ProxyPortInterfaces.cpp" 7.16.2023::21:45:41
+	"DefaultComponent\\DefaultConfig\\ProxyPortInterfaces.h" 7.16.2023::21:45:41
+	"DefaultComponent\\DefaultConfig\\RecieveData.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\RecieveData.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\Regulations.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\Regulations.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\SGCS.cpp" 7.16.2023::21:47:56
+	"DefaultComponent\\DefaultConfig\\SGCS.h" 7.16.2023::21:47:56
+	"DefaultComponent\\DefaultConfig\\SGCS_USECASE.cpp" 7.16.2023::21:45:41
+	"DefaultComponent\\DefaultConfig\\SGCS_USECASE.h" 7.16.2023::21:45:41
+	"DefaultComponent\\DefaultConfig\\SensorSystem.cpp" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\SensorSystem.h" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\Smartphone.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\Smartphone.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\SortingMechanism.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\SortingMechanism.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\Stakeholder.cpp" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\Stakeholder.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\StoringData.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\StoringData.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\SystemManager.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\SystemManager.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\TemperatureSensor.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\TemperatureSensor.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\UC_Littering.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\UC_Littering.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\UC_ManageData.cpp" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\UC_ManageData.h" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\UC_MonitorDashBoard.cpp" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\UC_MonitorDashBoard.h" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\UC_MonitorDataUsingMobileApp.cpp" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\UC_MonitorDataUsingMobileApp.h" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\UC_MonitorFillLevel.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\UC_MonitorFillLevel.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\UC_OpetimizeRoute.cpp" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\UC_OpetimizeRoute.h" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\UC_ProcessingData.cpp" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\UC_ProcessingData.h" 7.16.2023::21:47:25
+	"DefaultComponent\\DefaultConfig\\UC_RecieveDataFromSensor.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\UC_RecieveDataFromSensor.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\UC_SendDataToServer.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\UC_SendDataToServer.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\UC_SortGarbage.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\UC_SortGarbage.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\User.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\User.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\WIFIBlock.cpp" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\WIFIBlock.h" 7.16.2023::21:45:40
+	"DefaultComponent\\DefaultConfig\\float_Binlocation_ProxyFlowPropertyInterface.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\float_binfilllevel_ProxyFlowPropertyInterface.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\float_fillleve_ProxyFlowPropertyInterface.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\float_filllevel_ProxyAttributeInterface.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\float_filllevel_ProxyFlowPropertyInterface.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\float_locationX_ProxyFlowPropertyInterface.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\float_locationY_ProxyFlowPropertyInterface.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\float_temp_ProxyFlowPropertyInterface.h" 7.16.2023::21:45:39
+	"DefaultComponent\\DefaultConfig\\float_vehiclelocation_ProxyFlowPropertyInterface.h" 7.16.2023::21:45:39
 	
 }
 - m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
@@ -43,7 +108,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	"GUID 996e0459-47b5-431d-b5ec-2cb79126845d" "GUID 4576c32c-4857-4fe8-86fe-9623ad94d440"
 	
 }
-- size = 17;
+- size = 54;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
@@ -51,22 +116,83 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "UC_SortGarbage";
 	- _id = GUID 22686d7b-5db4-4207-b305-372c73c55fd8;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:45:41;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
 	- _subsystem = "Default";
-	- _name = "CloudPlatform";
+	- _name = "Devices";
+	- _id = GUID e2be90b8-aa63-4c78-99b0-4b2eea52e3e2;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "StoringData";
+	- _id = GUID 6dfe5e59-d7d5-4826-a9f9-752644c45510;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "*";
 	- _id = GUID 3f6685f6-7e36-4c29-8e98-28782e83383d;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Notification";
+	- _id = GUID ffadf0a1-ee9b-4f2d-ac61-2ad773613eaa;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "GarbageTank";
+	- _id = GUID fab8e6b9-8d2d-4762-bf6a-78e103faf809;
+}
+- genTime = 7.16.2023::21:47:25;
 - hElement = { IHandle 
 	- _m2Class = "ISubsystem";
 	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
 	- _name = "Default";
 	- _id = GUID 996e0459-47b5-431d-b5ec-2cb79126845d;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:47:56;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "UC_ManageData";
+	- _id = GUID 10bf1b76-64c8-4a84-bbe4-0c2c46ea6543;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "FillLevelSensor";
+	- _id = GUID 564e4611-f5b1-4e7d-b730-5ba3250cf46b;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "UC_OpetimizeRoute";
+	- _id = GUID 7b7233db-347a-4387-95bc-cffd2b5a11dc;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "HumiditySensor";
+	- _id = GUID 632bc224-2056-4752-8848-6919047de30e;
+}
+- genTime = 7.16.2023::21:47:25;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
@@ -74,7 +200,25 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "Garbage";
 	- _id = GUID e0fe6672-04e2-43c8-9a2f-cb80705b5d35;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "*";
+	- _id = GUID e8992157-eff2-4562-ac8c-bd568356b29b;
+}
+- genTime = 7.16.2023::21:45:41;
+- hElement = { IHandle 
+	- _m2Class = "*";
+	- _id = GUID 2190abc2-4bee-4df9-ae01-9efb0a5e8185;
+}
+- genTime = 7.16.2023::21:45:41;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Smartphone";
+	- _id = GUID 78a400ee-de2a-4bed-a2b0-fdd0a7dba5b3;
+}
+- genTime = 7.16.2023::21:47:25;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
@@ -82,7 +226,47 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "SGCS";
 	- _id = GUID e53e86d4-644d-4e33-89af-32e80bc76d89;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:47:56;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "TemperatureSensor";
+	- _id = GUID a9a422c3-70e2-408a-b32f-4db6ef634a4b;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "RecieveData";
+	- _id = GUID 438f6e9d-1f15-4744-9bcd-0a299c7d3ec7;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Stakeholder";
+	- _id = GUID 6d64e259-743d-4d01-9e7f-158839016238;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "GerographicInformationSystem";
+	- _id = GUID 9f29679c-1df6-4e16-9a37-be5d504a5b60;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "SortingMechanism";
+	- _id = GUID f03ee54d-b8c4-4081-a7ed-47d08f2c2abd;
+}
+- genTime = 7.16.2023::21:47:25;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
@@ -90,7 +274,36 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "UC_MonitorFillLevel";
 	- _id = GUID 522b14f2-a9d5-40ea-ad5e-701854edb1d9;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:45:41;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Battery";
+	- _id = GUID ce541605-19c7-44e8-a193-4f1bdeba26ae;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "UC_RecieveDataFromSensor";
+	- _id = GUID 2c7ccd5b-4663-44a2-97fd-6a17ad73c745;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "GovernmentOfficers";
+	- _id = GUID 3961d700-365d-43c2-8ffd-03c5b8fa0af2;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "*";
+	- _id = GUID 5095bfb1-d18a-4b6b-a7f5-7af001a865ca;
+}
+- genTime = 7.16.2023::21:45:41;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
@@ -98,7 +311,23 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "CommunicationSystem";
 	- _id = GUID b37310d5-1d68-4239-87ea-9f8698fa5cf7;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Computer";
+	- _id = GUID 51dab0c6-f98e-4f83-90a6-368d5c3973a5;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "UC_SendDataToServer";
+	- _id = GUID 35049ff6-70be-4a2b-b0ca-9b5400f7d842;
+}
+- genTime = 7.16.2023::21:47:25;
 - hElement = { IHandle 
 	- _m2Class = "IActor";
 	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
@@ -106,7 +335,12 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "SystemManager";
 	- _id = GUID 0fab15a7-07f6-4209-bea6-f2390bcf365f;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:45:41;
+- hElement = { IHandle 
+	- _m2Class = "*";
+	- _id = GUID 6cddb628-6dc4-4c54-a090-38fa41afcb8d;
+}
+- genTime = 7.16.2023::21:45:41;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
@@ -114,7 +348,44 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "CentralServer";
 	- _id = GUID 6674954d-b775-4c65-8f1e-791e5fd82b50;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:47:56;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "UC_MonitorDashBoard";
+	- _id = GUID 896ff121-2d64-48a4-bafc-37ba21f0cd1e;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "UC_ProcessingData";
+	- _id = GUID 0b95c762-f13f-473c-96e4-006d875505c6;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Regulations";
+	- _id = GUID f33af32e-4e91-41f4-bb70-08244293f62d;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "*";
+	- _id = GUID 1315cebc-f1b6-4360-b35f-a6757f2ab832;
+}
+- genTime = 7.16.2023::21:45:41;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "WIFIBlock";
+	- _id = GUID c800b924-7f0f-44b0-a659-07736448ec0f;
+}
+- genTime = 7.16.2023::21:47:25;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
@@ -122,7 +393,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "SensorSystem";
 	- _id = GUID 7edc526b-aab5-4ff7-ab5c-be3a8582b5f3;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:47:25;
 - hElement = { IHandle 
 	- _m2Class = "IActor";
 	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
@@ -130,7 +401,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "User";
 	- _id = GUID e9d78908-3b09-437a-b0f3-78601a044c72;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:47:25;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
@@ -138,21 +409,65 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "UC_Littering";
 	- _id = GUID 918f403c-e5fa-4007-9868-de8a224faf4f;
 }
-- genTime = 7.16.2023::18:54:24;
+- genTime = 7.16.2023::21:45:41;
+- hElement = { IHandle 
+	- _m2Class = "*";
+	- _id = GUID 301625f2-63c4-4c2d-9518-b458aa55407c;
+}
+- genTime = 7.16.2023::21:45:41;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "GovernWasteManagement";
+	- _id = GUID f0c46cdc-8cd7-4a49-9f0f-792a6e10cd44;
+}
+- genTime = 7.16.2023::21:47:25;
 - hElement = { IHandle 
 	- _m2Class = "ICodeGenConfigInfo";
 	- _filename = ".\\..\\..\\SGCS_rpy\\DefaultComponent.cmpx";
 	- _name = "DefaultComponent\\DefaultConfig";
 	- _id = GUID 65a3a3c8-688a-4d1c-9220-3b78d2719c39;
 }
-- genTime = 7.16.2023::18:54:24;
+- genTime = 7.16.2023::21:47:56;
 - hElement = { IHandle 
 	- _m2Class = "ISubsystem";
 	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
 	- _name = "SGCS_USECASE";
 	- _id = GUID 03d34fb8-637a-4c70-932a-bc3835731bd4;
 }
-- genTime = 7.16.2023::18:54:24;
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "*";
+	- _id = GUID bab6076c-39ec-4c62-b8da-eb947959456e;
+}
+- genTime = 7.16.2023::21:45:41;
+- hElement = { IHandle 
+	- _m2Class = "*";
+	- _id = GUID 9462d73e-da65-4bc5-bf71-40dc1dc34cae;
+}
+- genTime = 7.16.2023::21:45:41;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "GPSTracker";
+	- _id = GUID a59c94a4-91c1-4532-aa76-2a5e403acf69;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "UC_MonitorDataUsingMobileApp";
+	- _id = GUID f919f0a7-fb1f-4ad9-ae9b-96250a013f3e;
+}
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "*";
+	- _id = GUID 13d7fcb8-3c93-495b-9ddd-f36f48aeeeb0;
+}
+- genTime = 7.16.2023::21:45:41;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
@@ -160,7 +475,20 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "GarbgeCollectVehicle";
 	- _id = GUID 01f63ab6-d261-4ed5-90c4-5fd8d6ea7fb8;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:47:25;
+- hElement = { IHandle 
+	- _m2Class = "*";
+	- _id = GUID 5da3766e-e947-44ab-b454-33094dfaa227;
+}
+- genTime = 7.16.2023::21:45:41;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "EnvironmentalProtection";
+	- _id = GUID 58995e0c-90f7-4ef6-8c65-99e9efdc5cf0;
+}
+- genTime = 7.16.2023::21:47:25;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
@@ -168,7 +496,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "Enviroment";
 	- _id = GUID bf1da81b-10ad-4f96-995f-443f71b2af28;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:47:25;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
@@ -176,5 +504,5 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "GarbageBin";
 	- _id = GUID de4c7bed-8d10-450a-a0c7-d352f4f5443d;
 }
-- genTime = 7.16.2023::18:42:53;
+- genTime = 7.16.2023::21:47:25;
 

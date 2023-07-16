@@ -1,6 +1,6 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CloudPlatform
@@ -34,6 +34,10 @@ CloudPlatform::~CloudPlatform(void) {
     cleanUpRelations();
 }
 
+const UC_MonitorDashBoard* CloudPlatform::getUC_MonitorDashBoard(void) const {
+    return &UC_MonitorDashBoard;
+}
+
 const CentralServer* CloudPlatform::getItsCentralServer(void) const {
     return itsCentralServer;
 }
@@ -56,6 +60,10 @@ void CloudPlatform::setItsSGCS(SGCS* const p_SGCS) {
             p_SGCS->_setItsCloudPlatform(this);
         }
     _setItsSGCS(p_SGCS);
+}
+
+const UC_MonitorDataUsingMobileApp* CloudPlatform::getItsUC_MonitorDataUsingMobileApp(void) const {
+    return &itsUC_MonitorDataUsingMobileApp;
 }
 
 void CloudPlatform::cleanUpRelations(void) {
@@ -144,6 +152,10 @@ void OMAnimatedCloudPlatform::serializeRelations(AOMSRelations* aomsRelations) c
         {
             aomsRelations->ADD_ITEM(myReal->itsCentralServer);
         }
+    aomsRelations->addRelation("itsUC_MonitorDataUsingMobileApp", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsUC_MonitorDataUsingMobileApp);
+    aomsRelations->addRelation("UC_MonitorDashBoard", true, true);
+    aomsRelations->ADD_ITEM(&myReal->UC_MonitorDashBoard);
 }
 //#]
 

@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CloudPlatform
@@ -17,6 +17,10 @@
 #include <aom.h>
 //## auto_generated
 #include "Default.h"
+//## classInstance UC_MonitorDashBoard
+#include "UC_MonitorDashBoard.h"
+//## classInstance itsUC_MonitorDataUsingMobileApp
+#include "UC_MonitorDataUsingMobileApp.h"
 //## link itsCentralServer
 class CentralServer;
 
@@ -27,6 +31,10 @@ class SGCS;
 
 //## class CloudPlatform
 class CloudPlatform {
+#ifdef _OMINSTRUMENT
+    OM_DECLARE_COMPOSITE_OFFSET
+#endif // _OMINSTRUMENT
+
     ////    Friends    ////
     
 public :
@@ -46,6 +54,9 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
+    const UC_MonitorDashBoard* getUC_MonitorDashBoard(void) const;
+    
+    //## auto_generated
     const CentralServer* getItsCentralServer(void) const;
     
     //## auto_generated
@@ -56,6 +67,9 @@ public :
     
     //## auto_generated
     void setItsSGCS(SGCS* const p_SGCS);
+    
+    //## auto_generated
+    const UC_MonitorDataUsingMobileApp* getItsUC_MonitorDataUsingMobileApp(void) const;
 
 protected :
 
@@ -66,9 +80,13 @@ protected :
 
 private :
 
+    UC_MonitorDashBoard;		//## classInstance UC_MonitorDashBoard
+    
     CentralServer* itsCentralServer;		//## link itsCentralServer
     
     SGCS* itsSGCS;		//## link itsSGCS
+    
+    UC_MonitorDataUsingMobileApp itsUC_MonitorDataUsingMobileApp;		//## classInstance itsUC_MonitorDataUsingMobileApp
     
     ////    Framework operations    ////
 

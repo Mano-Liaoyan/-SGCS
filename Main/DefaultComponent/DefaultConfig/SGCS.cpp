@@ -1,6 +1,6 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: SGCS
@@ -14,20 +14,18 @@
 
 //## auto_generated
 #include "SGCS.h"
-//## link itsCentralServer
-#include "CentralServer.h"
-//## link itsCloudPlatform
-#include "CloudPlatform.h"
-//## link itsCommunicationSystem
-#include "CommunicationSystem.h"
+//## link itsDevices
+#include "Devices.h"
 //## link itsEnviroment
 #include "Enviroment.h"
-//## link itsGarbageBin
-#include "GarbageBin.h"
-//## link itsGarbgeCollectVehicle
-#include "GarbgeCollectVehicle.h"
+//## link itsGerographicInformationSystem
+#include "GerographicInformationSystem.h"
+//## link itsRegulations
+#include "Regulations.h"
 //## link itsSensorSystem
 #include "SensorSystem.h"
+//## link itsStakeholder
+#include "Stakeholder.h"
 //## link itsUser
 #include "User.h"
 //#[ ignore
@@ -37,7 +35,7 @@
 //## package Default
 
 //## class SGCS
-SGCS::SGCS(void) : itsCentralServer(NULL), itsCloudPlatform(NULL), itsCommunicationSystem(NULL), itsEnviroment(NULL), itsGarbageBin(NULL), itsGarbageBin_1(NULL), itsGarbageBin_2(NULL), itsGarbgeCollectVehicle(NULL), itsSensorSystem(NULL) {
+SGCS::SGCS(void) : itsCentralServer(NULL), itsCommunicationSystem(NULL), itsDevices(NULL), itsEnviroment(NULL), itsGarbageBin(NULL), itsGarbageBin_1(NULL), itsGarbageBin_2(NULL), itsGarbgeCollectVehicle(NULL), itsGerographicInformationSystem(NULL), itsRegulations(NULL), itsSensorSystem(NULL), itsStakeholder(NULL) {
     NOTIFY_CONSTRUCTOR(SGCS, SGCS(), 0, Default_SGCS_SGCS_SERIALIZE);
 }
 
@@ -58,16 +56,8 @@ void SGCS::setItsCentralServer(CentralServer* const p_CentralServer) {
     _setItsCentralServer(p_CentralServer);
 }
 
-const CloudPlatform* SGCS::getItsCloudPlatform(void) const {
-    return itsCloudPlatform;
-}
-
-void SGCS::setItsCloudPlatform(CloudPlatform* const p_CloudPlatform) {
-    if(p_CloudPlatform != NULL)
-        {
-            p_CloudPlatform->_setItsSGCS(this);
-        }
-    _setItsCloudPlatform(p_CloudPlatform);
+const CentralServer* SGCS::getItsCentralServer_1(void) const {
+    return &itsCentralServer_1;
 }
 
 const CommunicationSystem* SGCS::getItsCommunicationSystem(void) const {
@@ -80,6 +70,22 @@ void SGCS::setItsCommunicationSystem(CommunicationSystem* const p_CommunicationS
             p_CommunicationSystem->_setItsSGCS(this);
         }
     _setItsCommunicationSystem(p_CommunicationSystem);
+}
+
+const CommunicationSystem* SGCS::getItsCommunicationSystem_1(void) const {
+    return &itsCommunicationSystem_1;
+}
+
+const Devices* SGCS::getItsDevices(void) const {
+    return itsDevices;
+}
+
+void SGCS::setItsDevices(Devices* const p_Devices) {
+    if(p_Devices != NULL)
+        {
+            p_Devices->_setItsSGCS(this);
+        }
+    _setItsDevices(p_Devices);
 }
 
 const Enviroment* SGCS::getItsEnviroment(void) const {
@@ -138,6 +144,10 @@ void SGCS::setItsGarbageBin_2(GarbageBin* const p_GarbageBin) {
         }
 }
 
+const GarbageBin* SGCS::getItsGarbageBin_3(void) const {
+    return &itsGarbageBin_3;
+}
+
 const GarbgeCollectVehicle* SGCS::getItsGarbgeCollectVehicle(void) const {
     return itsGarbgeCollectVehicle;
 }
@@ -150,6 +160,34 @@ void SGCS::setItsGarbgeCollectVehicle(GarbgeCollectVehicle* const p_GarbgeCollec
     _setItsGarbgeCollectVehicle(p_GarbgeCollectVehicle);
 }
 
+const GarbgeCollectVehicle* SGCS::getItsGarbgeCollectVehicle_1(void) const {
+    return &itsGarbgeCollectVehicle_1;
+}
+
+const GerographicInformationSystem* SGCS::getItsGerographicInformationSystem(void) const {
+    return itsGerographicInformationSystem;
+}
+
+void SGCS::setItsGerographicInformationSystem(GerographicInformationSystem* const p_GerographicInformationSystem) {
+    if(p_GerographicInformationSystem != NULL)
+        {
+            p_GerographicInformationSystem->_setItsSGCS(this);
+        }
+    _setItsGerographicInformationSystem(p_GerographicInformationSystem);
+}
+
+const Regulations* SGCS::getItsRegulations(void) const {
+    return itsRegulations;
+}
+
+void SGCS::setItsRegulations(Regulations* const p_Regulations) {
+    if(p_Regulations != NULL)
+        {
+            p_Regulations->_setItsSGCS(this);
+        }
+    _setItsRegulations(p_Regulations);
+}
+
 const SensorSystem* SGCS::getItsSensorSystem(void) const {
     return itsSensorSystem;
 }
@@ -160,6 +198,18 @@ void SGCS::setItsSensorSystem(SensorSystem* const p_SensorSystem) {
             p_SensorSystem->_setItsSGCS(this);
         }
     _setItsSensorSystem(p_SensorSystem);
+}
+
+const Stakeholder* SGCS::getItsStakeholder(void) const {
+    return itsStakeholder;
+}
+
+void SGCS::setItsStakeholder(Stakeholder* const p_Stakeholder) {
+    if(p_Stakeholder != NULL)
+        {
+            p_Stakeholder->_setItsSGCS(this);
+        }
+    _setItsStakeholder(p_Stakeholder);
 }
 
 OMIterator<User*> SGCS::getItsUser(void) const {
@@ -203,16 +253,6 @@ void SGCS::cleanUpRelations(void) {
                 }
             itsCentralServer = NULL;
         }
-    if(itsCloudPlatform != NULL)
-        {
-            NOTIFY_RELATION_CLEARED("itsCloudPlatform");
-            const SGCS* p_SGCS = itsCloudPlatform->getItsSGCS();
-            if(p_SGCS != NULL)
-                {
-                    itsCloudPlatform->__setItsSGCS(NULL);
-                }
-            itsCloudPlatform = NULL;
-        }
     if(itsCommunicationSystem != NULL)
         {
             NOTIFY_RELATION_CLEARED("itsCommunicationSystem");
@@ -222,6 +262,16 @@ void SGCS::cleanUpRelations(void) {
                     itsCommunicationSystem->__setItsSGCS(NULL);
                 }
             itsCommunicationSystem = NULL;
+        }
+    if(itsDevices != NULL)
+        {
+            NOTIFY_RELATION_CLEARED("itsDevices");
+            const SGCS* p_SGCS = itsDevices->getItsSGCS();
+            if(p_SGCS != NULL)
+                {
+                    itsDevices->__setItsSGCS(NULL);
+                }
+            itsDevices = NULL;
         }
     if(itsEnviroment != NULL)
         {
@@ -263,6 +313,26 @@ void SGCS::cleanUpRelations(void) {
                 }
             itsGarbgeCollectVehicle = NULL;
         }
+    if(itsGerographicInformationSystem != NULL)
+        {
+            NOTIFY_RELATION_CLEARED("itsGerographicInformationSystem");
+            const SGCS* p_SGCS = itsGerographicInformationSystem->getItsSGCS();
+            if(p_SGCS != NULL)
+                {
+                    itsGerographicInformationSystem->__setItsSGCS(NULL);
+                }
+            itsGerographicInformationSystem = NULL;
+        }
+    if(itsRegulations != NULL)
+        {
+            NOTIFY_RELATION_CLEARED("itsRegulations");
+            const SGCS* p_SGCS = itsRegulations->getItsSGCS();
+            if(p_SGCS != NULL)
+                {
+                    itsRegulations->__setItsSGCS(NULL);
+                }
+            itsRegulations = NULL;
+        }
     if(itsSensorSystem != NULL)
         {
             NOTIFY_RELATION_CLEARED("itsSensorSystem");
@@ -272,6 +342,16 @@ void SGCS::cleanUpRelations(void) {
                     itsSensorSystem->__setItsSGCS(NULL);
                 }
             itsSensorSystem = NULL;
+        }
+    if(itsStakeholder != NULL)
+        {
+            NOTIFY_RELATION_CLEARED("itsStakeholder");
+            const SGCS* p_SGCS = itsStakeholder->getItsSGCS();
+            if(p_SGCS != NULL)
+                {
+                    itsStakeholder->__setItsSGCS(NULL);
+                }
+            itsStakeholder = NULL;
         }
     {
         OMIterator<User*> iter(itsUser);
@@ -312,31 +392,6 @@ void SGCS::_clearItsCentralServer(void) {
     itsCentralServer = NULL;
 }
 
-void SGCS::__setItsCloudPlatform(CloudPlatform* const p_CloudPlatform) {
-    itsCloudPlatform = p_CloudPlatform;
-    if(p_CloudPlatform != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsCloudPlatform", p_CloudPlatform, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsCloudPlatform");
-        }
-}
-
-void SGCS::_setItsCloudPlatform(CloudPlatform* const p_CloudPlatform) {
-    if(itsCloudPlatform != NULL)
-        {
-            itsCloudPlatform->__setItsSGCS(NULL);
-        }
-    __setItsCloudPlatform(p_CloudPlatform);
-}
-
-void SGCS::_clearItsCloudPlatform(void) {
-    NOTIFY_RELATION_CLEARED("itsCloudPlatform");
-    itsCloudPlatform = NULL;
-}
-
 void SGCS::__setItsCommunicationSystem(CommunicationSystem* const p_CommunicationSystem) {
     itsCommunicationSystem = p_CommunicationSystem;
     if(p_CommunicationSystem != NULL)
@@ -360,6 +415,31 @@ void SGCS::_setItsCommunicationSystem(CommunicationSystem* const p_Communication
 void SGCS::_clearItsCommunicationSystem(void) {
     NOTIFY_RELATION_CLEARED("itsCommunicationSystem");
     itsCommunicationSystem = NULL;
+}
+
+void SGCS::__setItsDevices(Devices* const p_Devices) {
+    itsDevices = p_Devices;
+    if(p_Devices != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsDevices", p_Devices, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsDevices");
+        }
+}
+
+void SGCS::_setItsDevices(Devices* const p_Devices) {
+    if(itsDevices != NULL)
+        {
+            itsDevices->__setItsSGCS(NULL);
+        }
+    __setItsDevices(p_Devices);
+}
+
+void SGCS::_clearItsDevices(void) {
+    NOTIFY_RELATION_CLEARED("itsDevices");
+    itsDevices = NULL;
 }
 
 void SGCS::__setItsEnviroment(Enviroment* const p_Enviroment) {
@@ -437,6 +517,56 @@ void SGCS::_clearItsGarbgeCollectVehicle(void) {
     itsGarbgeCollectVehicle = NULL;
 }
 
+void SGCS::__setItsGerographicInformationSystem(GerographicInformationSystem* const p_GerographicInformationSystem) {
+    itsGerographicInformationSystem = p_GerographicInformationSystem;
+    if(p_GerographicInformationSystem != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsGerographicInformationSystem", p_GerographicInformationSystem, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsGerographicInformationSystem");
+        }
+}
+
+void SGCS::_setItsGerographicInformationSystem(GerographicInformationSystem* const p_GerographicInformationSystem) {
+    if(itsGerographicInformationSystem != NULL)
+        {
+            itsGerographicInformationSystem->__setItsSGCS(NULL);
+        }
+    __setItsGerographicInformationSystem(p_GerographicInformationSystem);
+}
+
+void SGCS::_clearItsGerographicInformationSystem(void) {
+    NOTIFY_RELATION_CLEARED("itsGerographicInformationSystem");
+    itsGerographicInformationSystem = NULL;
+}
+
+void SGCS::__setItsRegulations(Regulations* const p_Regulations) {
+    itsRegulations = p_Regulations;
+    if(p_Regulations != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsRegulations", p_Regulations, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsRegulations");
+        }
+}
+
+void SGCS::_setItsRegulations(Regulations* const p_Regulations) {
+    if(itsRegulations != NULL)
+        {
+            itsRegulations->__setItsSGCS(NULL);
+        }
+    __setItsRegulations(p_Regulations);
+}
+
+void SGCS::_clearItsRegulations(void) {
+    NOTIFY_RELATION_CLEARED("itsRegulations");
+    itsRegulations = NULL;
+}
+
 void SGCS::__setItsSensorSystem(SensorSystem* const p_SensorSystem) {
     itsSensorSystem = p_SensorSystem;
     if(p_SensorSystem != NULL)
@@ -460,6 +590,31 @@ void SGCS::_setItsSensorSystem(SensorSystem* const p_SensorSystem) {
 void SGCS::_clearItsSensorSystem(void) {
     NOTIFY_RELATION_CLEARED("itsSensorSystem");
     itsSensorSystem = NULL;
+}
+
+void SGCS::__setItsStakeholder(Stakeholder* const p_Stakeholder) {
+    itsStakeholder = p_Stakeholder;
+    if(p_Stakeholder != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsStakeholder", p_Stakeholder, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsStakeholder");
+        }
+}
+
+void SGCS::_setItsStakeholder(Stakeholder* const p_Stakeholder) {
+    if(itsStakeholder != NULL)
+        {
+            itsStakeholder->__setItsSGCS(NULL);
+        }
+    __setItsStakeholder(p_Stakeholder);
+}
+
+void SGCS::_clearItsStakeholder(void) {
+    NOTIFY_RELATION_CLEARED("itsStakeholder");
+    itsStakeholder = NULL;
 }
 
 void SGCS::_addItsUser(User* const p_User) {
@@ -502,11 +657,6 @@ void OMAnimatedSGCS::serializeRelations(AOMSRelations* aomsRelations) const {
         {
             aomsRelations->ADD_ITEM(myReal->itsCentralServer);
         }
-    aomsRelations->addRelation("itsCloudPlatform", false, true);
-    if(myReal->itsCloudPlatform)
-        {
-            aomsRelations->ADD_ITEM(myReal->itsCloudPlatform);
-        }
     aomsRelations->addRelation("itsGarbageBin_1", false, true);
     if(myReal->itsGarbageBin_1)
         {
@@ -540,6 +690,34 @@ void OMAnimatedSGCS::serializeRelations(AOMSRelations* aomsRelations) const {
             iter++;
         }
     }
+    aomsRelations->addRelation("itsStakeholder", false, true);
+    if(myReal->itsStakeholder)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsStakeholder);
+        }
+    aomsRelations->addRelation("itsDevices", false, true);
+    if(myReal->itsDevices)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsDevices);
+        }
+    aomsRelations->addRelation("itsGerographicInformationSystem", false, true);
+    if(myReal->itsGerographicInformationSystem)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsGerographicInformationSystem);
+        }
+    aomsRelations->addRelation("itsRegulations", false, true);
+    if(myReal->itsRegulations)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsRegulations);
+        }
+    aomsRelations->addRelation("itsCommunicationSystem_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsCommunicationSystem_1);
+    aomsRelations->addRelation("itsCentralServer_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsCentralServer_1);
+    aomsRelations->addRelation("itsGarbageBin_3", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsGarbageBin_3);
+    aomsRelations->addRelation("itsGarbgeCollectVehicle_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsGarbgeCollectVehicle_1);
 }
 //#]
 

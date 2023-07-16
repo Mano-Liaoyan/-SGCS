@@ -1,6 +1,6 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: UC_Littering
@@ -298,6 +298,27 @@ void UC_Littering::state_9_exit(void) {
 IOxfReactive::TakeEventStatus UC_Littering::state_9_processEvent(void) {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
     switch (state_9_active) {
+        // State WaitForLittering
+        case WaitForLittering:
+        {
+            if(IS_EVENT_TYPE_OF(evStartLittering_SGCS_USECASE_id) == 1)
+                {
+                    NOTIFY_TRANSITION_STARTED("0");
+                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_9.Littering.WaitForLittering");
+                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_9.Littering.GenerateLitter");
+                    pushNullTransition();
+                    Littering_subState = GenerateLitter;
+                    state_9_active = GenerateLitter;
+                    //#[ state SGCS.state_9.Littering.GenerateLitter.(Entry) 
+                    generateLitter();
+                    //#]
+                    NOTIFY_TRANSITION_TERMINATED("0");
+                    res = eventConsumed;
+                }
+            
+            
+        }
+        break;
         // State GenerateLitter
         case GenerateLitter:
         {
@@ -314,27 +335,6 @@ IOxfReactive::TakeEventStatus UC_Littering::state_9_processEvent(void) {
                     GEN(evLitterGenerated);
                     //#]
                     NOTIFY_TRANSITION_TERMINATED("22");
-                    res = eventConsumed;
-                }
-            
-            
-        }
-        break;
-        // State WaitForLittering
-        case WaitForLittering:
-        {
-            if(IS_EVENT_TYPE_OF(evStartLittering_SGCS_USECASE_id) == 1)
-                {
-                    NOTIFY_TRANSITION_STARTED("0");
-                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_9.Littering.WaitForLittering");
-                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_9.Littering.GenerateLitter");
-                    pushNullTransition();
-                    Littering_subState = GenerateLitter;
-                    state_9_active = GenerateLitter;
-                    //#[ state SGCS.state_9.Littering.GenerateLitter.(Entry) 
-                    generateLitter();
-                    //#]
-                    NOTIFY_TRANSITION_TERMINATED("0");
                     res = eventConsumed;
                 }
             
@@ -417,17 +417,17 @@ void UC_Littering::Littering_entDef(void) {
 
 void UC_Littering::Littering_exit(void) {
     switch (Littering_subState) {
+        // State WaitForLittering
+        case WaitForLittering:
+        {
+            NOTIFY_STATE_EXITED("ROOT.SGCS.state_9.Littering.WaitForLittering");
+        }
+        break;
         // State GenerateLitter
         case GenerateLitter:
         {
             popNullTransition();
             NOTIFY_STATE_EXITED("ROOT.SGCS.state_9.Littering.GenerateLitter");
-        }
-        break;
-        // State WaitForLittering
-        case WaitForLittering:
-        {
-            NOTIFY_STATE_EXITED("ROOT.SGCS.state_9.Littering.WaitForLittering");
         }
         break;
         // State Litterd
@@ -729,22 +729,46 @@ IOxfReactive::TakeEventStatus UC_Littering::state_20_processEvent(void) {
             
         }
         break;
-        // State AddNonRecyclable
-        case AddNonRecyclable:
+        // State Sort
+        case Sort:
         {
             if(IS_EVENT_TYPE_OF(OMNullEventId) == 1)
                 {
-                    NOTIFY_TRANSITION_STARTED("20");
-                    popNullTransition();
-                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.AddNonRecyclable");
-                    //#[ transition 21 
-                    showBinStaus();
-                    //#]
-                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_20.Sorting.WaitForSorting");
-                    Sorting_subState = WaitForSorting;
-                    state_20_active = WaitForSorting;
-                    NOTIFY_TRANSITION_TERMINATED("20");
-                    res = eventConsumed;
+                    //## transition 17 
+                    if(recyclable == true)
+                        {
+                            NOTIFY_TRANSITION_STARTED("17");
+                            popNullTransition();
+                            NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.Sort");
+                            NOTIFY_STATE_ENTERED("ROOT.SGCS.state_20.Sorting.AddRecyclable");
+                            pushNullTransition();
+                            Sorting_subState = AddRecyclable;
+                            state_20_active = AddRecyclable;
+                            //#[ state SGCS.state_20.Sorting.AddRecyclable.(Entry) 
+                            setRecyclableBin(recyclableBin + 1);
+                            //#]
+                            NOTIFY_TRANSITION_TERMINATED("17");
+                            res = eventConsumed;
+                        }
+                    else
+                        {
+                            //## transition 18 
+                            if(recyclable == false)
+                                {
+                                    NOTIFY_TRANSITION_STARTED("18");
+                                    popNullTransition();
+                                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.Sort");
+                                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_20.Sorting.AddNonRecyclable");
+                                    pushNullTransition();
+                                    Sorting_subState = AddNonRecyclable;
+                                    state_20_active = AddNonRecyclable;
+                                    //#[ state SGCS.state_20.Sorting.AddNonRecyclable.(Entry) 
+                                    setNonRecyclableBin(nonRecyclableBin + 1);
+                                    //#]
+                                    NOTIFY_TRANSITION_TERMINATED("18");
+                                    res = eventConsumed;
+                                }
+                        }
                 }
             
             
@@ -771,46 +795,22 @@ IOxfReactive::TakeEventStatus UC_Littering::state_20_processEvent(void) {
             
         }
         break;
-        // State Sort
-        case Sort:
+        // State AddNonRecyclable
+        case AddNonRecyclable:
         {
             if(IS_EVENT_TYPE_OF(OMNullEventId) == 1)
                 {
-                    //## transition 18 
-                    if(recyclable == false)
-                        {
-                            NOTIFY_TRANSITION_STARTED("18");
-                            popNullTransition();
-                            NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.Sort");
-                            NOTIFY_STATE_ENTERED("ROOT.SGCS.state_20.Sorting.AddNonRecyclable");
-                            pushNullTransition();
-                            Sorting_subState = AddNonRecyclable;
-                            state_20_active = AddNonRecyclable;
-                            //#[ state SGCS.state_20.Sorting.AddNonRecyclable.(Entry) 
-                            setNonRecyclableBin(nonRecyclableBin + 1);
-                            //#]
-                            NOTIFY_TRANSITION_TERMINATED("18");
-                            res = eventConsumed;
-                        }
-                    else
-                        {
-                            //## transition 17 
-                            if(recyclable == true)
-                                {
-                                    NOTIFY_TRANSITION_STARTED("17");
-                                    popNullTransition();
-                                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.Sort");
-                                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_20.Sorting.AddRecyclable");
-                                    pushNullTransition();
-                                    Sorting_subState = AddRecyclable;
-                                    state_20_active = AddRecyclable;
-                                    //#[ state SGCS.state_20.Sorting.AddRecyclable.(Entry) 
-                                    setRecyclableBin(recyclableBin + 1);
-                                    //#]
-                                    NOTIFY_TRANSITION_TERMINATED("17");
-                                    res = eventConsumed;
-                                }
-                        }
+                    NOTIFY_TRANSITION_STARTED("20");
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.AddNonRecyclable");
+                    //#[ transition 21 
+                    showBinStaus();
+                    //#]
+                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_20.Sorting.WaitForSorting");
+                    Sorting_subState = WaitForSorting;
+                    state_20_active = WaitForSorting;
+                    NOTIFY_TRANSITION_TERMINATED("20");
+                    res = eventConsumed;
                 }
             
             
@@ -840,11 +840,11 @@ void UC_Littering::Sorting_exit(void) {
             NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.WaitForSorting");
         }
         break;
-        // State AddNonRecyclable
-        case AddNonRecyclable:
+        // State Sort
+        case Sort:
         {
             popNullTransition();
-            NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.AddNonRecyclable");
+            NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.Sort");
         }
         break;
         // State AddRecyclable
@@ -854,11 +854,11 @@ void UC_Littering::Sorting_exit(void) {
             NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.AddRecyclable");
         }
         break;
-        // State Sort
-        case Sort:
+        // State AddNonRecyclable
+        case AddNonRecyclable:
         {
             popNullTransition();
-            NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.Sort");
+            NOTIFY_STATE_EXITED("ROOT.SGCS.state_20.Sorting.AddNonRecyclable");
         }
         break;
         default:
@@ -890,85 +890,22 @@ void UC_Littering::state_10_exit(void) {
 IOxfReactive::TakeEventStatus UC_Littering::state_10_processEvent(void) {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
     switch (state_10_active) {
-        // State FillOverFlow
-        case FillOverFlow:
+        case accepteventaction_13:
         {
             if(IS_EVENT_TYPE_OF(OMNullEventId) == 1)
                 {
-                    NOTIFY_TRANSITION_STARTED("30");
+                    NOTIFY_TRANSITION_STARTED("12");
                     popNullTransition();
-                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.FillOverFlow");
-                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_10.Detecting.sendaction_32");
+                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.accepteventaction_13");
+                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_10.Detecting.Activate");
                     pushNullTransition();
-                    Detecting_subState = sendaction_32;
-                    state_10_active = sendaction_32;
-                    //#[ state SGCS.state_10.Detecting.sendaction_32.(Entry) 
-                    GEN(evOverfill);
+                    Detecting_subState = Activate;
+                    state_10_active = Activate;
+                    //#[ state SGCS.state_10.Detecting.Activate.(Entry) 
+                    setVolume(volume);
+                    setRecyclable(recyclable);
                     //#]
-                    NOTIFY_TRANSITION_TERMINATED("30");
-                    res = eventConsumed;
-                }
-            
-            
-        }
-        break;
-        // State Activate
-        case Activate:
-        {
-            if(IS_EVENT_TYPE_OF(OMNullEventId) == 1)
-                {
-                    //## transition 9 
-                    if(fillLevel + volume > maxFillLevel)
-                        {
-                            NOTIFY_TRANSITION_STARTED("9");
-                            popNullTransition();
-                            NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.Activate");
-                            NOTIFY_STATE_ENTERED("ROOT.SGCS.state_10.Detecting.FillOverFlow");
-                            pushNullTransition();
-                            Detecting_subState = FillOverFlow;
-                            state_10_active = FillOverFlow;
-                            //#[ state SGCS.state_10.Detecting.FillOverFlow.(Entry) 
-                            fillOverflow();
-                            //#]
-                            NOTIFY_TRANSITION_TERMINATED("9");
-                            res = eventConsumed;
-                        }
-                    else
-                        {
-                            //## transition 8 
-                            if(fillLevel + volume <= maxFillLevel)
-                                {
-                                    NOTIFY_TRANSITION_STARTED("8");
-                                    popNullTransition();
-                                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.Activate");
-                                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_10.Detecting.UpdateFillLevel");
-                                    pushNullTransition();
-                                    Detecting_subState = UpdateFillLevel;
-                                    state_10_active = UpdateFillLevel;
-                                    //#[ state SGCS.state_10.Detecting.UpdateFillLevel.(Entry) 
-                                    setFillLevel(fillLevel+volume);
-                                    //#]
-                                    NOTIFY_TRANSITION_TERMINATED("8");
-                                    res = eventConsumed;
-                                }
-                        }
-                }
-            
-            
-        }
-        break;
-        // State ShowFillLevel
-        case ShowFillLevel:
-        {
-            if(IS_EVENT_TYPE_OF(OMNullEventId) == 1)
-                {
-                    NOTIFY_TRANSITION_STARTED("4");
-                    popNullTransition();
-                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.ShowFillLevel");
-                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_10.Detecting.WaitForDetecting");
-                    Detecting_subState = WaitForDetecting;
-                    state_10_active = WaitForDetecting;
-                    NOTIFY_TRANSITION_TERMINATED("4");
+                    NOTIFY_TRANSITION_TERMINATED("12");
                     res = eventConsumed;
                 }
             
@@ -1015,6 +952,91 @@ IOxfReactive::TakeEventStatus UC_Littering::state_10_processEvent(void) {
             
         }
         break;
+        // State FillOverFlow
+        case FillOverFlow:
+        {
+            if(IS_EVENT_TYPE_OF(OMNullEventId) == 1)
+                {
+                    NOTIFY_TRANSITION_STARTED("30");
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.FillOverFlow");
+                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_10.Detecting.sendaction_32");
+                    pushNullTransition();
+                    Detecting_subState = sendaction_32;
+                    state_10_active = sendaction_32;
+                    //#[ state SGCS.state_10.Detecting.sendaction_32.(Entry) 
+                    GEN(evOverfill);
+                    //#]
+                    NOTIFY_TRANSITION_TERMINATED("30");
+                    res = eventConsumed;
+                }
+            
+            
+        }
+        break;
+        // State ShowFillLevel
+        case ShowFillLevel:
+        {
+            if(IS_EVENT_TYPE_OF(OMNullEventId) == 1)
+                {
+                    NOTIFY_TRANSITION_STARTED("4");
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.ShowFillLevel");
+                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_10.Detecting.WaitForDetecting");
+                    Detecting_subState = WaitForDetecting;
+                    state_10_active = WaitForDetecting;
+                    NOTIFY_TRANSITION_TERMINATED("4");
+                    res = eventConsumed;
+                }
+            
+            
+        }
+        break;
+        // State Activate
+        case Activate:
+        {
+            if(IS_EVENT_TYPE_OF(OMNullEventId) == 1)
+                {
+                    //## transition 8 
+                    if(fillLevel + volume <= maxFillLevel)
+                        {
+                            NOTIFY_TRANSITION_STARTED("8");
+                            popNullTransition();
+                            NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.Activate");
+                            NOTIFY_STATE_ENTERED("ROOT.SGCS.state_10.Detecting.UpdateFillLevel");
+                            pushNullTransition();
+                            Detecting_subState = UpdateFillLevel;
+                            state_10_active = UpdateFillLevel;
+                            //#[ state SGCS.state_10.Detecting.UpdateFillLevel.(Entry) 
+                            setFillLevel(fillLevel+volume);
+                            //#]
+                            NOTIFY_TRANSITION_TERMINATED("8");
+                            res = eventConsumed;
+                        }
+                    else
+                        {
+                            //## transition 9 
+                            if(fillLevel + volume > maxFillLevel)
+                                {
+                                    NOTIFY_TRANSITION_STARTED("9");
+                                    popNullTransition();
+                                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.Activate");
+                                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_10.Detecting.FillOverFlow");
+                                    pushNullTransition();
+                                    Detecting_subState = FillOverFlow;
+                                    state_10_active = FillOverFlow;
+                                    //#[ state SGCS.state_10.Detecting.FillOverFlow.(Entry) 
+                                    fillOverflow();
+                                    //#]
+                                    NOTIFY_TRANSITION_TERMINATED("9");
+                                    res = eventConsumed;
+                                }
+                        }
+                }
+            
+            
+        }
+        break;
         // State sendaction_19
         case sendaction_19:
         {
@@ -1031,28 +1053,6 @@ IOxfReactive::TakeEventStatus UC_Littering::state_10_processEvent(void) {
                     showFillLevel();
                     //#]
                     NOTIFY_TRANSITION_TERMINATED("5");
-                    res = eventConsumed;
-                }
-            
-            
-        }
-        break;
-        case accepteventaction_13:
-        {
-            if(IS_EVENT_TYPE_OF(OMNullEventId) == 1)
-                {
-                    NOTIFY_TRANSITION_STARTED("12");
-                    popNullTransition();
-                    NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.accepteventaction_13");
-                    NOTIFY_STATE_ENTERED("ROOT.SGCS.state_10.Detecting.Activate");
-                    pushNullTransition();
-                    Detecting_subState = Activate;
-                    state_10_active = Activate;
-                    //#[ state SGCS.state_10.Detecting.Activate.(Entry) 
-                    setVolume(volume);
-                    setRecyclable(recyclable);
-                    //#]
-                    NOTIFY_TRANSITION_TERMINATED("12");
                     res = eventConsumed;
                 }
             
@@ -1099,25 +1099,10 @@ void UC_Littering::Detecting_entDef(void) {
 
 void UC_Littering::Detecting_exit(void) {
     switch (Detecting_subState) {
-        // State FillOverFlow
-        case FillOverFlow:
+        case accepteventaction_13:
         {
             popNullTransition();
-            NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.FillOverFlow");
-        }
-        break;
-        // State Activate
-        case Activate:
-        {
-            popNullTransition();
-            NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.Activate");
-        }
-        break;
-        // State ShowFillLevel
-        case ShowFillLevel:
-        {
-            popNullTransition();
-            NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.ShowFillLevel");
+            NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.accepteventaction_13");
         }
         break;
         // State WaitForDetecting
@@ -1133,17 +1118,32 @@ void UC_Littering::Detecting_exit(void) {
             NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.UpdateFillLevel");
         }
         break;
+        // State FillOverFlow
+        case FillOverFlow:
+        {
+            popNullTransition();
+            NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.FillOverFlow");
+        }
+        break;
+        // State ShowFillLevel
+        case ShowFillLevel:
+        {
+            popNullTransition();
+            NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.ShowFillLevel");
+        }
+        break;
+        // State Activate
+        case Activate:
+        {
+            popNullTransition();
+            NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.Activate");
+        }
+        break;
         // State sendaction_19
         case sendaction_19:
         {
             popNullTransition();
             NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.sendaction_19");
-        }
-        break;
-        case accepteventaction_13:
-        {
-            popNullTransition();
-            NOTIFY_STATE_EXITED("ROOT.SGCS.state_10.Detecting.accepteventaction_13");
         }
         break;
         // State sendaction_32
@@ -1216,14 +1216,14 @@ void OMAnimatedUC_Littering::state_9_serializeStates(AOMSState* aomsState) const
 void OMAnimatedUC_Littering::Littering_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT.SGCS.state_9.Littering");
     switch (myReal->Littering_subState) {
-        case UC_Littering::GenerateLitter:
-        {
-            GenerateLitter_serializeStates(aomsState);
-        }
-        break;
         case UC_Littering::WaitForLittering:
         {
             WaitForLittering_serializeStates(aomsState);
+        }
+        break;
+        case UC_Littering::GenerateLitter:
+        {
+            GenerateLitter_serializeStates(aomsState);
         }
         break;
         case UC_Littering::Litterd:
@@ -1352,9 +1352,9 @@ void OMAnimatedUC_Littering::Sorting_serializeStates(AOMSState* aomsState) const
             WaitForSorting_serializeStates(aomsState);
         }
         break;
-        case UC_Littering::AddNonRecyclable:
+        case UC_Littering::Sort:
         {
-            AddNonRecyclable_serializeStates(aomsState);
+            Sort_serializeStates(aomsState);
         }
         break;
         case UC_Littering::AddRecyclable:
@@ -1362,9 +1362,9 @@ void OMAnimatedUC_Littering::Sorting_serializeStates(AOMSState* aomsState) const
             AddRecyclable_serializeStates(aomsState);
         }
         break;
-        case UC_Littering::Sort:
+        case UC_Littering::AddNonRecyclable:
         {
-            Sort_serializeStates(aomsState);
+            AddNonRecyclable_serializeStates(aomsState);
         }
         break;
         default:
@@ -1399,19 +1399,9 @@ void OMAnimatedUC_Littering::state_10_serializeStates(AOMSState* aomsState) cons
 void OMAnimatedUC_Littering::Detecting_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT.SGCS.state_10.Detecting");
     switch (myReal->Detecting_subState) {
-        case UC_Littering::FillOverFlow:
+        case UC_Littering::accepteventaction_13:
         {
-            FillOverFlow_serializeStates(aomsState);
-        }
-        break;
-        case UC_Littering::Activate:
-        {
-            Activate_serializeStates(aomsState);
-        }
-        break;
-        case UC_Littering::ShowFillLevel:
-        {
-            ShowFillLevel_serializeStates(aomsState);
+            accepteventaction_13_serializeStates(aomsState);
         }
         break;
         case UC_Littering::WaitForDetecting:
@@ -1424,14 +1414,24 @@ void OMAnimatedUC_Littering::Detecting_serializeStates(AOMSState* aomsState) con
             UpdateFillLevel_serializeStates(aomsState);
         }
         break;
+        case UC_Littering::FillOverFlow:
+        {
+            FillOverFlow_serializeStates(aomsState);
+        }
+        break;
+        case UC_Littering::ShowFillLevel:
+        {
+            ShowFillLevel_serializeStates(aomsState);
+        }
+        break;
+        case UC_Littering::Activate:
+        {
+            Activate_serializeStates(aomsState);
+        }
+        break;
         case UC_Littering::sendaction_19:
         {
             sendaction_19_serializeStates(aomsState);
-        }
-        break;
-        case UC_Littering::accepteventaction_13:
-        {
-            accepteventaction_13_serializeStates(aomsState);
         }
         break;
         case UC_Littering::sendaction_32:

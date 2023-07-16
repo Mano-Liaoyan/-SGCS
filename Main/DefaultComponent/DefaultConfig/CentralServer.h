@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yanyifan Liao
+	Login		: yanev
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CentralServer
@@ -17,9 +17,16 @@
 #include <aom.h>
 //## auto_generated
 #include "Default.h"
-//## link itsCloudPlatform
-class CloudPlatform;
-
+//## classInstance itsNotification
+#include "Notification.h"
+//## classInstance itsRecieveData
+#include "RecieveData.h"
+//## classInstance itsUC_ManageData
+#include "UC_ManageData.h"
+//## classInstance itsUC_OpetimizeRoute
+#include "UC_OpetimizeRoute.h"
+//## classInstance itsUC_ProcessingData
+#include "UC_ProcessingData.h"
 //## link itsSGCS
 class SGCS;
 
@@ -46,43 +53,77 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
-    const CloudPlatform* getItsCloudPlatform(void) const;
+    const float getBinfilllevel(void) const;
     
     //## auto_generated
-    void setItsCloudPlatform(CloudPlatform* const p_CloudPlatform);
+    void setBinfilllevel(const float p_binfilllevel);
+    
+    //## auto_generated
+    const float getLocationX(void) const;
+    
+    //## auto_generated
+    void setLocationX(const float p_locationX);
+    
+    //## auto_generated
+    const float getLocationY(void) const;
+    
+    //## auto_generated
+    void setLocationY(const float p_locationY);
+    
+    //## auto_generated
+    const Notification* getItsNotification(void) const;
+    
+    //## auto_generated
+    const RecieveData* getItsRecieveData(void) const;
     
     //## auto_generated
     const SGCS* getItsSGCS(void) const;
     
     //## auto_generated
     void setItsSGCS(SGCS* const p_SGCS);
+    
+    //## auto_generated
+    const UC_ManageData* getItsUC_ManageData(void) const;
+    
+    //## auto_generated
+    const UC_OpetimizeRoute* getItsUC_OpetimizeRoute(void) const;
+    
+    //## auto_generated
+    const UC_ProcessingData* getItsUC_ProcessingData(void) const;
 
 protected :
 
     //## auto_generated
     void cleanUpRelations(void);
     
-    ////    Relations and components    ////
+    ////    Attributes    ////
 
 private :
 
-    CloudPlatform* itsCloudPlatform;		//## link itsCloudPlatform
+    float binfilllevel;		//## attribute binfilllevel
+    
+    float locationX;		//## attribute locationX
+    
+    float locationY;		//## attribute locationY
+    
+    ////    Relations and components    ////
+    
+    Notification itsNotification;		//## classInstance itsNotification
+    
+    RecieveData itsRecieveData;		//## classInstance itsRecieveData
     
     SGCS* itsSGCS;		//## link itsSGCS
+    
+    UC_ManageData itsUC_ManageData;		//## classInstance itsUC_ManageData
+    
+    UC_OpetimizeRoute itsUC_OpetimizeRoute;		//## classInstance itsUC_OpetimizeRoute
+    
+    UC_ProcessingData itsUC_ProcessingData;		//## classInstance itsUC_ProcessingData
     
     ////    Framework operations    ////
 
 public :
 
-    //## auto_generated
-    void __setItsCloudPlatform(CloudPlatform* const p_CloudPlatform);
-    
-    //## auto_generated
-    void _setItsCloudPlatform(CloudPlatform* const p_CloudPlatform);
-    
-    //## auto_generated
-    void _clearItsCloudPlatform(void);
-    
     //## auto_generated
     void __setItsSGCS(SGCS* const p_SGCS);
     
@@ -102,6 +143,8 @@ class OMAnimatedCentralServer : virtual public AOMInstance {
     
 public :
 
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
     virtual void serializeRelations(AOMSRelations* aomsRelations) const;
 };
 //#]
