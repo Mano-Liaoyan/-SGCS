@@ -1,0 +1,40 @@
+I-Logix-RPY-Archive version 8.15.0 * 202002261110
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 4;
+	- value = "DefaultComponent\\UC_MonitorFillLevel_Simulation\\SGCS_USECASE.cpp" 7.16.2023::10:19:45
+	"DefaultComponent\\UC_MonitorFillLevel_Simulation\\SGCS_USECASE.h" 7.16.2023::10:19:45
+	"DefaultComponent\\UC_MonitorFillLevel_Simulation\\UC_MonitorFillLevel.cpp" 7.16.2023::10:33:46
+	"DefaultComponent\\UC_MonitorFillLevel_Simulation\\UC_MonitorFillLevel.h" 7.16.2023::10:33:46
+	
+}
+- m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
+	- size = 2;
+	- value = "GUID 03d34fb8-637a-4c70-932a-bc3835731bd4" "GUID 4576c32c-4857-4fe8-86fe-9623ad94d440"
+	"GUID 820ae8c3-60ba-49a6-b836-fc9fa20dc861" "GUID 4576c32c-4857-4fe8-86fe-9623ad94d440"
+	
+}
+- size = 3;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = ".\\..\\..\\SGCS_rpy\\DefaultComponent.cmpx";
+	- _name = "DefaultComponent\\UC_MonitorFillLevel_Simulation";
+	- _id = GUID ba8ec35e-d411-47d3-ab6c-bbb3cb965b04;
+}
+- genTime = 7.16.2023::10:33:46;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
+	- _subsystem = "SGCS_USECASE";
+	- _name = "UC_MonitorFillLevel";
+	- _id = GUID 522b14f2-a9d5-40ea-ad5e-701854edb1d9;
+}
+- genTime = 7.16.2023::10:33:46;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
+	- _name = "SGCS_USECASE";
+	- _id = GUID 03d34fb8-637a-4c70-932a-bc3835731bd4;
+}
+- genTime = 7.16.2023::10:33:46;
+

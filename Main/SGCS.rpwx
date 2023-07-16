@@ -20,268 +20,16 @@
 						<_placement type="p">
 							<CCommon_WINDOWPLACEMENT type="e">
 								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
+								<m_nFlags type="a">2</m_nFlags>
+								<m_showCmd type="a">3</m_showCmd>
 								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">288</m_nLeft>
-								<m_nTop type="a">288</m_nTop>
-								<m_nRight type="a">2282</m_nRight>
-								<m_nBottom type="a">1324</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
-								<_hname type="a">Model1</_hname>
-								<_hid type="a">GUID 781edcf5-8d59-412f-9ee1-957ac8364a6a</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1951 964 </_DownRight>
-						<m_nDiagramIndex type="a">4</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">320</m_nLeft>
-								<m_nTop type="a">320</m_nTop>
-								<m_nRight type="a">2314</m_nRight>
-								<m_nBottom type="a">1356</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
-								<_hname type="a">PROJECT_CONTEXT</_hname>
-								<_hid type="a">GUID dae92d6c-fef5-4742-abe6-4d2abf84533c</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1951 964 </_DownRight>
-						<m_nDiagramIndex type="a">3</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">0</m_nLeft>
-								<m_nTop type="a">0</m_nTop>
-								<m_nRight type="a">2031</m_nRight>
-								<m_nBottom type="a">1242</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
-								<_hfilename type="a">.\SGCS_rpy\SGCS_REQ.sbsx</_hfilename>
-								<_hsubsystem type="a">SGCS_REQ</_hsubsystem>
-								<_hname type="a">Central_Server_Req_Diagram</_hname>
-								<_hid type="a">GUID be7cbbb7-f85c-4e16-afa2-75c198e6b8aa</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1972 1161 </_DownRight>
-						<m_nDiagramIndex type="a">8</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">44</m_nLeft>
-								<m_nTop type="a">44</m_nTop>
-								<m_nRight type="a">2075</m_nRight>
-								<m_nBottom type="a">1286</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
-								<_hfilename type="a">.\SGCS_rpy\SGCS_REQ.sbsx</_hfilename>
-								<_hsubsystem type="a">SGCS_REQ</_hsubsystem>
-								<_hname type="a">Cloud_Platform_Req_ Diagram</_hname>
-								<_hid type="a">GUID 4f616ed5-6594-4f19-a81a-888613fc387c</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1968 1158 </_DownRight>
-						<m_nDiagramIndex type="a">7</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">88</m_nLeft>
-								<m_nTop type="a">88</m_nTop>
-								<m_nRight type="a">2119</m_nRight>
-								<m_nBottom type="a">1330</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
-								<_hfilename type="a">.\SGCS_rpy\SGCS_REQ.sbsx</_hfilename>
-								<_hsubsystem type="a">SGCS_REQ</_hsubsystem>
-								<_hname type="a">Communication_Req_Diagram</_hname>
-								<_hid type="a">GUID 0b210acb-1fe8-4fe2-80e4-a1857fdc3e19</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1968 1158 </_DownRight>
-						<m_nDiagramIndex type="a">6</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">616</m_nLeft>
-								<m_nTop type="a">616</m_nTop>
-								<m_nRight type="a">2647</m_nRight>
-								<m_nBottom type="a">1858</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
-								<_hfilename type="a">.\SGCS_rpy\SGCS_REQ.sbsx</_hfilename>
-								<_hsubsystem type="a">SGCS_REQ</_hsubsystem>
-								<_hname type="a">Garbage_Bin_Req_ Diagram</_hname>
-								<_hid type="a">GUID f7ac23c6-82d9-4887-b06d-fb292c4a3f4a</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1972 1161 </_DownRight>
-						<m_nDiagramIndex type="a">9</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">384</m_nLeft>
-								<m_nTop type="a">384</m_nTop>
-								<m_nRight type="a">2378</m_nRight>
-								<m_nBottom type="a">1420</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
-								<_hfilename type="a">.\SGCS_rpy\SGCS_REQ.sbsx</_hfilename>
-								<_hsubsystem type="a">SGCS_REQ</_hsubsystem>
-								<_hname type="a">Garbage_Vehicle_Req_Diagram</_hname>
-								<_hid type="a">GUID 313700f1-d207-4ee7-bb64-01197f6935dc</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1951 964 </_DownRight>
-						<m_nDiagramIndex type="a">2</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">572</m_nLeft>
-								<m_nTop type="a">572</m_nTop>
-								<m_nRight type="a">2603</m_nRight>
-								<m_nBottom type="a">1814</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
-								<_hfilename type="a">.\SGCS_rpy\SGCS_REQ.sbsx</_hfilename>
-								<_hsubsystem type="a">SGCS_REQ</_hsubsystem>
-								<_hname type="a">SGCS_SPEC</_hname>
-								<_hid type="a">GUID 6d0ad13c-d3bf-4d73-8e95-8b7eb2a8885b</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1968 1158 </_DownRight>
-						<m_nDiagramIndex type="a">10</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">32</m_nLeft>
-								<m_nTop type="a">32</m_nTop>
-								<m_nRight type="a">1605</m_nRight>
-								<m_nBottom type="a">935</m_nBottom>
+								<m_ptMaxPositionX type="a">-11</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-45</m_ptMaxPositionY>
+								<m_nLeft type="a">266</m_nLeft>
+								<m_nTop type="a">266</m_nTop>
+								<m_nRight type="a">1243</m_nRight>
+								<m_nBottom type="a">957</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
@@ -294,10 +42,10 @@
 								<_hid type="a">GUID 1d44d84a-028f-4355-98c3-f79466d14413</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">673 366 </_DownRight>
-						<m_nDiagramIndex type="a">12</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
+						<_UpLeft type="a">17 0 </_UpLeft>
+						<_DownRight type="a">801 608 </_DownRight>
+						<m_nDiagramIndex type="a">2</m_nDiagramIndex>
+						<m_bIsActiveView type="a">1</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
 					<CGEMdiDiagramParams type="e">
@@ -308,12 +56,12 @@
 								<m_showCmd type="a">1</m_showCmd>
 								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">192</m_nLeft>
-								<m_nTop type="a">192</m_nTop>
-								<m_nRight type="a">1765</m_nRight>
-								<m_nBottom type="a">1095</m_nBottom>
+								<m_ptMaxPositionX type="a">-11</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-45</m_ptMaxPositionY>
+								<m_nLeft type="a">228</m_nLeft>
+								<m_nTop type="a">228</m_nTop>
+								<m_nRight type="a">1205</m_nRight>
+								<m_nBottom type="a">919</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
@@ -326,41 +74,9 @@
 								<_hid type="a">GUID 2079da01-3449-486b-82c0-775ad3c0a39a</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">757 411 </_DownRight>
-						<m_nDiagramIndex type="a">11</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">448</m_nLeft>
-								<m_nTop type="a">448</m_nTop>
-								<m_nRight type="a">2442</m_nRight>
-								<m_nBottom type="a">1484</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
-								<_hfilename type="a">.\SGCS_rpy\SGCS_USECASE.sbsx</_hfilename>
-								<_hsubsystem type="a">SGCS_USECASE</_hsubsystem>
-								<_hname type="a">context</_hname>
-								<_hid type="a">GUID 708cc4a3-88a7-439a-8f8e-6291acfb3082</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">646 319 </_DownRight>
-						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<_UpLeft type="a">0 -28 </_UpLeft>
+						<_DownRight type="a">647 395 </_DownRight>
+						<m_nDiagramIndex type="a">3</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
@@ -372,36 +88,140 @@
 								<m_showCmd type="a">3</m_showCmd>
 								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-9</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-38</m_ptMaxPositionY>
-								<m_nLeft type="a">440</m_nLeft>
-								<m_nTop type="a">440</m_nTop>
-								<m_nRight type="a">2923</m_nRight>
-								<m_nBottom type="a">1682</m_nBottom>
+								<m_ptMaxPositionX type="a">-11</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-45</m_ptMaxPositionY>
+								<m_nLeft type="a">114</m_nLeft>
+								<m_nTop type="a">114</m_nTop>
+								<m_nRight type="a">1136</m_nRight>
+								<m_nBottom type="a">805</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
+								<_hfilename type="a">.\SGCS_rpy\SGCS_USECASE.sbsx</_hfilename>
+								<_hsubsystem type="a">SGCS_USECASE</_hsubsystem>
+								<_hclass type="a">UC_MonitorFillLevel</_hclass>
+								<_hname type="a">StatechartDiagram</_hname>
+								<_hid type="a">GUID b12761ef-d00e-40cc-a0e2-094481453731</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">702 544 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-11</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-45</m_ptMaxPositionY>
+								<m_nLeft type="a">76</m_nLeft>
+								<m_nTop type="a">76</m_nTop>
+								<m_nRight type="a">1223</m_nRight>
+								<m_nBottom type="a">549</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
-								<_hname type="a">SYSTEM_CONTEXT</_hname>
-								<_hid type="a">GUID eeeaf1b4-fdde-4b79-88b9-e7543c49e340</_hid>
+								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
+								<_hfilename type="a">.\SGCS_rpy\SGCS_USECASE.sbsx</_hfilename>
+								<_hsubsystem type="a">SGCS_USECASE</_hsubsystem>
+								<_hclass type="a">UC_MonitorFillLevel</_hclass>
+								<_hname type="a">StatechartDiagram</_hname>
+								<_hid type="a">GUID b12761ef-d00e-40cc-a0e2-094481453731</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">-32 9 </_UpLeft>
-						<_DownRight type="a">1037 665 </_DownRight>
-						<m_nDiagramIndex type="a">5</m_nDiagramIndex>
-						<m_bIsActiveView type="a">1</m_bIsActiveView>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">800 283 </_DownRight>
+						<_instanceName type="a">UC_MonitorFillLevel[0]</_instanceName>
+						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">2</m_nFlags>
+								<m_showCmd type="a">3</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-11</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-45</m_ptMaxPositionY>
+								<m_nLeft type="a">228</m_nLeft>
+								<m_nTop type="a">228</m_nTop>
+								<m_nRight type="a">1325</m_nRight>
+								<m_nBottom type="a">919</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
+								<_hfilename type="a">.\SGCS_rpy\SGCS_USECASE.sbsx</_hfilename>
+								<_hsubsystem type="a">SGCS_USECASE</_hsubsystem>
+								<_hclass type="a">UC_SortGarbage</_hclass>
+								<_hname type="a">StatechartDiagram</_hname>
+								<_hid type="a">GUID 69187800-3f47-4371-aede-efc375cfae2f</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">651 505 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-11</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-45</m_ptMaxPositionY>
+								<m_nLeft type="a">0</m_nLeft>
+								<m_nTop type="a">0</m_nTop>
+								<m_nRight type="a">1080</m_nRight>
+								<m_nBottom type="a">473</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
+								<_hfilename type="a">.\SGCS_rpy\SGCS_USECASE.sbsx</_hfilename>
+								<_hsubsystem type="a">SGCS_USECASE</_hsubsystem>
+								<_hclass type="a">UC_SortGarbage</_hclass>
+								<_hname type="a">StatechartDiagram</_hname>
+								<_hid type="a">GUID 69187800-3f47-4371-aede-efc375cfae2f</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 13 </_UpLeft>
+						<_DownRight type="a">537 215 </_DownRight>
+						<_instanceName type="a">UC_SortGarbage[1]</_instanceName>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
 				</IRPYRawContainer>
 			</myViewsWithID>
-			<_fullName type="a">C:\Users\yanev\OneDrive\TUE\Courses\AY1Q4\System Design Engineering\Assignment\SysML\SGCS\Main\SGCS</_fullName>
+			<_fullName type="a">C:\Users\Yanyifan Liao\Desktop\SGCS\Main\SGCS</_fullName>
 			<m_SearchScopeList type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
 			</m_SearchScopeList>
-			<bUsingBrowserCustomView type="a">1</bUsingBrowserCustomView>
+			<bUsingBrowserCustomView type="a">0</bUsingBrowserCustomView>
 			<bApplyOnDiagrams type="a">0</bApplyOnDiagrams>
 			<liCustomViewIDs type="c">
 				<IRPYRawContainer type="e">
@@ -417,16 +237,6 @@
 				<idOrFolder type="a">folder</idOrFolder>
 			</favoritesItem>
 			
-
-	- tableMatrixRowAdditionHight = {
-		count=1;
-		{ - TableMatrixView
-			id=e91d3489-bb16-45fb-a3d6-41ce96eee679;
-			rowAdditionalHight=;;
-			rowAdditionalHightExt=;
-		}
-	}
-
 		</CGEMdiWorkspace>
 		
 	</RHAPSODY-MODEL>

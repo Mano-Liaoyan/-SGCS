@@ -1,0 +1,172 @@
+I-Logix-RPY-Archive version 8.15.0 * 202002261110
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 32;
+	- value = "DefaultComponent\\DefaultConfig\\CentralServer.cpp" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\CentralServer.h" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\CloudPlatform.cpp" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\CloudPlatform.h" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\CommunicationSystem.cpp" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\CommunicationSystem.h" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\Default.cpp" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\Default.h" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\Enviroment.cpp" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\Enviroment.h" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\Garbage.cpp" 7.16.2023::0:32:40
+	"DefaultComponent\\DefaultConfig\\Garbage.h" 7.16.2023::0:32:40
+	"DefaultComponent\\DefaultConfig\\GarbageBin.cpp" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\GarbageBin.h" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\GarbgeCollectVehicle.cpp" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\GarbgeCollectVehicle.h" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\SGCS.cpp" 7.16.2023::0:31:50
+	"DefaultComponent\\DefaultConfig\\SGCS.h" 7.16.2023::0:27:16
+	"DefaultComponent\\DefaultConfig\\SGCS_USECASE.cpp" 7.16.2023::13:37:27
+	"DefaultComponent\\DefaultConfig\\SGCS_USECASE.h" 7.16.2023::13:37:27
+	"DefaultComponent\\DefaultConfig\\SensorSystem.cpp" 7.16.2023::0:23:34
+	"DefaultComponent\\DefaultConfig\\SensorSystem.h" 7.16.2023::0:23:34
+	"DefaultComponent\\DefaultConfig\\SystemManager.cpp" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\SystemManager.h" 7.16.2023::0:22:49
+	"DefaultComponent\\DefaultConfig\\UC_Littering.cpp" 7.16.2023::11:51:12
+	"DefaultComponent\\DefaultConfig\\UC_Littering.h" 7.16.2023::11:48:11
+	"DefaultComponent\\DefaultConfig\\UC_MonitorFillLevel.cpp" 7.16.2023::13:48:24
+	"DefaultComponent\\DefaultConfig\\UC_MonitorFillLevel.h" 7.16.2023::13:48:24
+	"DefaultComponent\\DefaultConfig\\UC_SortGarbage.cpp" 7.16.2023::13:48:24
+	"DefaultComponent\\DefaultConfig\\UC_SortGarbage.h" 7.16.2023::13:48:24
+	"DefaultComponent\\DefaultConfig\\User.cpp" 7.16.2023::0:31:50
+	"DefaultComponent\\DefaultConfig\\User.h" 7.16.2023::0:31:50
+	
+}
+- m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
+	- size = 3;
+	- value = "GUID 03d34fb8-637a-4c70-932a-bc3835731bd4" "GUID 4576c32c-4857-4fe8-86fe-9623ad94d440"
+	"GUID 820ae8c3-60ba-49a6-b836-fc9fa20dc861" "GUID 4576c32c-4857-4fe8-86fe-9623ad94d440"
+	"GUID 996e0459-47b5-431d-b5ec-2cb79126845d" "GUID 4576c32c-4857-4fe8-86fe-9623ad94d440"
+	
+}
+- size = 16;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
+	- _subsystem = "SGCS_USECASE";
+	- _name = "UC_SortGarbage";
+	- _id = GUID 22686d7b-5db4-4207-b305-372c73c55fd8;
+}
+- genTime = 7.16.2023::13:48:24;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "CloudPlatform";
+	- _id = GUID 3f6685f6-7e36-4c29-8e98-28782e83383d;
+}
+- genTime = 7.16.2023::10:17:42;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _name = "Default";
+	- _id = GUID 996e0459-47b5-431d-b5ec-2cb79126845d;
+}
+- genTime = 7.16.2023::13:33:43;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Garbage";
+	- _id = GUID e0fe6672-04e2-43c8-9a2f-cb80705b5d35;
+}
+- genTime = 7.16.2023::10:17:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "SGCS";
+	- _id = GUID e53e86d4-644d-4e33-89af-32e80bc76d89;
+}
+- genTime = 7.16.2023::10:17:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
+	- _subsystem = "SGCS_USECASE";
+	- _name = "UC_MonitorFillLevel";
+	- _id = GUID 522b14f2-a9d5-40ea-ad5e-701854edb1d9;
+}
+- genTime = 7.16.2023::13:48:24;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "CommunicationSystem";
+	- _id = GUID b37310d5-1d68-4239-87ea-9f8698fa5cf7;
+}
+- genTime = 7.16.2023::10:17:42;
+- hElement = { IHandle 
+	- _m2Class = "IActor";
+	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
+	- _subsystem = "SGCS_USECASE";
+	- _name = "SystemManager";
+	- _id = GUID 0fab15a7-07f6-4209-bea6-f2390bcf365f;
+}
+- genTime = 7.16.2023::10:17:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "CentralServer";
+	- _id = GUID 6674954d-b775-4c65-8f1e-791e5fd82b50;
+}
+- genTime = 7.16.2023::13:33:43;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "SensorSystem";
+	- _id = GUID 7edc526b-aab5-4ff7-ab5c-be3a8582b5f3;
+}
+- genTime = 7.16.2023::13:33:43;
+- hElement = { IHandle 
+	- _m2Class = "IActor";
+	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
+	- _subsystem = "SGCS_USECASE";
+	- _name = "User";
+	- _id = GUID e9d78908-3b09-437a-b0f3-78601a044c72;
+}
+- genTime = 7.16.2023::10:17:42;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = ".\\..\\..\\SGCS_rpy\\DefaultComponent.cmpx";
+	- _name = "DefaultComponent\\DefaultConfig";
+	- _id = GUID 65a3a3c8-688a-4d1c-9220-3b78d2719c39;
+}
+- genTime = 7.16.2023::13:48:24;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = ".\\..\\..\\SGCS_rpy\\SGCS_USECASE.sbsx";
+	- _name = "SGCS_USECASE";
+	- _id = GUID 03d34fb8-637a-4c70-932a-bc3835731bd4;
+}
+- genTime = 7.16.2023::13:48:24;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "GarbgeCollectVehicle";
+	- _id = GUID 01f63ab6-d261-4ed5-90c4-5fd8d6ea7fb8;
+}
+- genTime = 7.16.2023::10:17:42;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Enviroment";
+	- _id = GUID bf1da81b-10ad-4f96-995f-443f71b2af28;
+}
+- genTime = 7.16.2023::13:33:43;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\SGCS_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "GarbageBin";
+	- _id = GUID de4c7bed-8d10-450a-a0c7-d352f4f5443d;
+}
+- genTime = 7.16.2023::13:33:43;
+
