@@ -14,137 +14,97 @@
 
 //## auto_generated
 #include "SGCS_USECASE.h"
-//## classInstance itsUC_SortGarbage
-#include "UC_SortGarbage.h"
+//## auto_generated
+#include "UC_Littering.h"
 //## auto_generated
 #include "UC_MonitorFillLevel.h"
+//## auto_generated
+#include "UC_SortGarbage.h"
 //#[ ignore
-#define evStartLittering_SERIALIZE \
-    OMADD_SER(v, x2String(myEvent->v))\
-    OMADD_SER(recyclable, x2String(myEvent->recyclable))
-#define evStartLittering_UNSERIALIZE \
-    OMADD_UNSER(int, v, OMDestructiveString2X)\
-    OMADD_UNSER(bool, recyclable, OMDestructiveString2X)
-#define evStartLittering_CONSTRUCTOR evStartLittering(v, recyclable)
+#define evStartLittering_SERIALIZE OM_NO_OP
 
-#define evStartSorting_SERIALIZE OMADD_SER(recyclable, x2String(myEvent->recyclable))
+#define evStartLittering_UNSERIALIZE OM_NO_OP
 
-#define evStartSorting_UNSERIALIZE OMADD_UNSER(bool, recyclable, OMDestructiveString2X)
+#define evStartLittering_CONSTRUCTOR evStartLittering()
 
-#define evStartSorting_CONSTRUCTOR evStartSorting(recyclable)
+#define evStartSorting_SERIALIZE OM_NO_OP
+
+#define evStartSorting_UNSERIALIZE OM_NO_OP
+
+#define evStartSorting_CONSTRUCTOR evStartSorting()
+
+#define evLitterGenerated_SERIALIZE OM_NO_OP
+
+#define evLitterGenerated_UNSERIALIZE OM_NO_OP
+
+#define evLitterGenerated_CONSTRUCTOR evLitterGenerated()
+
+#define evOverfill_SERIALIZE OM_NO_OP
+
+#define evOverfill_UNSERIALIZE OM_NO_OP
+
+#define evOverfill_CONSTRUCTOR evOverfill()
 //#]
 
 //## package SGCS_USECASE
 
 
-//## classInstance itsUC_SortGarbage
-UC_SortGarbage itsUC_SortGarbage;
-
 #ifdef _OMINSTRUMENT
 static void serializeGlobalVars(AOMSAttributes* /* aomsAttributes */);
 
-static void RenameGlobalInstances(void);
-
 IMPLEMENT_META_PACKAGE(SGCS_USECASE, SGCS_USECASE)
-#endif // _OMINSTRUMENT
 
-void SGCS_USECASE_initRelations(void) {
-    {
-        {
-            itsUC_SortGarbage.setShouldDelete(false);
-        }
-    }
-    
-    #ifdef _OMINSTRUMENT
-    RenameGlobalInstances();
-    #endif // _OMINSTRUMENT
-}
-
-bool SGCS_USECASE_startBehavior(void) {
-    bool done = true;
-    if(done == true)
-        {
-            done = itsUC_SortGarbage.startBehavior();
-        }
-    return done;
-}
-
-#ifdef _OMINSTRUMENT
 static void serializeGlobalVars(AOMSAttributes* /* aomsAttributes */) {
 }
-
-static void RenameGlobalInstances(void) {
-    OM_SET_INSTANCE_NAME(&itsUC_SortGarbage, UC_SortGarbage, "itsUC_SortGarbage", AOMNoMultiplicity);
-}
 #endif // _OMINSTRUMENT
 
-//#[ ignore
-SGCS_USECASE_OMInitializer::SGCS_USECASE_OMInitializer(void) {
-    SGCS_USECASE_initRelations();
-    (void) SGCS_USECASE_startBehavior();
-}
-
-SGCS_USECASE_OMInitializer::~SGCS_USECASE_OMInitializer(void) {
-}
-//#]
-
-//## event evStartLittering(int,bool)
-evStartLittering::evStartLittering(void) {
+//## event evStartLittering()
+evStartLittering::evStartLittering(void) : OMEvent() {
     NOTIFY_EVENT_CONSTRUCTOR(evStartLittering)
     setId(evStartLittering_SGCS_USECASE_id);
-}
-
-evStartLittering::evStartLittering(const int p_v, const bool p_recyclable) : OMEvent() ,v(p_v),recyclable(p_recyclable) {
-    NOTIFY_EVENT_CONSTRUCTOR(evStartLittering)
-    setId(evStartLittering_SGCS_USECASE_id);
-}
-
-int evStartLittering::getV(void) const {
-    return v;
-}
-
-void evStartLittering::setV(const int p_v) {
-    v = p_v;
-}
-
-bool evStartLittering::getRecyclable(void) const {
-    return recyclable;
-}
-
-void evStartLittering::setRecyclable(const bool p_recyclable) {
-    recyclable = p_recyclable;
 }
 
 //#[ ignore
 const IOxfEvent::ID evStartLittering_SGCS_USECASE_id(30001);
 //#]
 
-IMPLEMENT_META_EVENT_P(evStartLittering, SGCS_USECASE, SGCS_USECASE, evStartLittering(int,bool))
+IMPLEMENT_META_EVENT_P(evStartLittering, SGCS_USECASE, SGCS_USECASE, evStartLittering())
 
-//## event evStartSorting(bool)
-evStartSorting::evStartSorting(void) {
+//## event evStartSorting()
+evStartSorting::evStartSorting(void) : OMEvent() {
     NOTIFY_EVENT_CONSTRUCTOR(evStartSorting)
     setId(evStartSorting_SGCS_USECASE_id);
-}
-
-evStartSorting::evStartSorting(const bool p_recyclable) : OMEvent() ,recyclable(p_recyclable) {
-    NOTIFY_EVENT_CONSTRUCTOR(evStartSorting)
-    setId(evStartSorting_SGCS_USECASE_id);
-}
-
-bool evStartSorting::getRecyclable(void) const {
-    return recyclable;
-}
-
-void evStartSorting::setRecyclable(const bool p_recyclable) {
-    recyclable = p_recyclable;
 }
 
 //#[ ignore
 const IOxfEvent::ID evStartSorting_SGCS_USECASE_id(30002);
 //#]
 
-IMPLEMENT_META_EVENT_P(evStartSorting, SGCS_USECASE, SGCS_USECASE, evStartSorting(bool))
+IMPLEMENT_META_EVENT_P(evStartSorting, SGCS_USECASE, SGCS_USECASE, evStartSorting())
+
+//## event evLitterGenerated()
+evLitterGenerated::evLitterGenerated(void) : OMEvent() {
+    NOTIFY_EVENT_CONSTRUCTOR(evLitterGenerated)
+    setId(evLitterGenerated_SGCS_USECASE_id);
+}
+
+//#[ ignore
+const IOxfEvent::ID evLitterGenerated_SGCS_USECASE_id(30003);
+//#]
+
+IMPLEMENT_META_EVENT_P(evLitterGenerated, SGCS_USECASE, SGCS_USECASE, evLitterGenerated())
+
+//## event evOverfill()
+evOverfill::evOverfill(void) : OMEvent() {
+    NOTIFY_EVENT_CONSTRUCTOR(evOverfill)
+    setId(evOverfill_SGCS_USECASE_id);
+}
+
+//#[ ignore
+const IOxfEvent::ID evOverfill_SGCS_USECASE_id(30004);
+//#]
+
+IMPLEMENT_META_EVENT_P(evOverfill, SGCS_USECASE, SGCS_USECASE, evOverfill())
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\SGCS_USECASE.cpp

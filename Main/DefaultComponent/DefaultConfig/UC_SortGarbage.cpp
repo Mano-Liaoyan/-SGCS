@@ -16,16 +16,16 @@
 
 //## auto_generated
 #include "UC_SortGarbage.h"
-//## link itsUC_MonitorFillLevel
-#include "UC_MonitorFillLevel.h"
 //#[ ignore
 #define SGCS_USECASE_UC_SortGarbage_UC_SortGarbage_SERIALIZE OM_NO_OP
+
+#define SGCS_USECASE_UC_SortGarbage_showBinStaus_SERIALIZE OM_NO_OP
 //#]
 
 //## package SGCS_USECASE
 
 //## class UC_SortGarbage
-UC_SortGarbage::UC_SortGarbage(IOxfActive* const theActiveContext) : OMReactive(), nonRecyclableBin(0), recyclableBin(0), itsUC_MonitorFillLevel(NULL) {
+UC_SortGarbage::UC_SortGarbage(IOxfActive* const theActiveContext) : OMReactive(), nonRecyclableBin(0), recyclableBin(0) {
     NOTIFY_REACTIVE_CONSTRUCTOR(UC_SortGarbage, UC_SortGarbage(), 0, SGCS_USECASE_UC_SortGarbage_UC_SortGarbage_SERIALIZE);
     setActiveContext(theActiveContext, false);
     initStatechart();
@@ -33,7 +33,13 @@ UC_SortGarbage::UC_SortGarbage(IOxfActive* const theActiveContext) : OMReactive(
 
 UC_SortGarbage::~UC_SortGarbage(void) {
     NOTIFY_DESTRUCTOR(~UC_SortGarbage, true);
-    cleanUpRelations();
+}
+
+void UC_SortGarbage::showBinStaus(void) {
+    NOTIFY_OPERATION(showBinStaus, showBinStaus(), 0, SGCS_USECASE_UC_SortGarbage_showBinStaus_SERIALIZE);
+    //#[ operation showBinStaus()
+    std::cout << "Recyclable Bin: "<< recyclableBin << " None RecyclableBin: "<< nonRecyclableBin << std::endl;
+    //#]
 }
 
 const int UC_SortGarbage::getNonRecyclableBin(void) const {
@@ -60,18 +66,6 @@ void UC_SortGarbage::setRecyclableBin(const int p_recyclableBin) {
     recyclableBin = p_recyclableBin;
 }
 
-const UC_MonitorFillLevel* UC_SortGarbage::getItsUC_MonitorFillLevel(void) const {
-    return itsUC_MonitorFillLevel;
-}
-
-void UC_SortGarbage::setItsUC_MonitorFillLevel(UC_MonitorFillLevel* const p_UC_MonitorFillLevel) {
-    if(p_UC_MonitorFillLevel != NULL)
-        {
-            p_UC_MonitorFillLevel->_setItsUC_SortGarbage(this);
-        }
-    _setItsUC_MonitorFillLevel(p_UC_MonitorFillLevel);
-}
-
 bool UC_SortGarbage::startBehavior(void) {
     bool done = false;
     done = OMReactive::startBehavior();
@@ -81,44 +75,6 @@ bool UC_SortGarbage::startBehavior(void) {
 void UC_SortGarbage::initStatechart(void) {
     rootState_subState = OMNonState;
     rootState_active = OMNonState;
-}
-
-void UC_SortGarbage::cleanUpRelations(void) {
-    if(itsUC_MonitorFillLevel != NULL)
-        {
-            NOTIFY_RELATION_CLEARED("itsUC_MonitorFillLevel");
-            const UC_SortGarbage* p_UC_SortGarbage = itsUC_MonitorFillLevel->getItsUC_SortGarbage();
-            if(p_UC_SortGarbage != NULL)
-                {
-                    itsUC_MonitorFillLevel->__setItsUC_SortGarbage(NULL);
-                }
-            itsUC_MonitorFillLevel = NULL;
-        }
-}
-
-void UC_SortGarbage::__setItsUC_MonitorFillLevel(UC_MonitorFillLevel* const p_UC_MonitorFillLevel) {
-    itsUC_MonitorFillLevel = p_UC_MonitorFillLevel;
-    if(p_UC_MonitorFillLevel != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsUC_MonitorFillLevel", p_UC_MonitorFillLevel, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsUC_MonitorFillLevel");
-        }
-}
-
-void UC_SortGarbage::_setItsUC_MonitorFillLevel(UC_MonitorFillLevel* const p_UC_MonitorFillLevel) {
-    if(itsUC_MonitorFillLevel != NULL)
-        {
-            itsUC_MonitorFillLevel->__setItsUC_SortGarbage(NULL);
-        }
-    __setItsUC_MonitorFillLevel(p_UC_MonitorFillLevel);
-}
-
-void UC_SortGarbage::_clearItsUC_MonitorFillLevel(void) {
-    NOTIFY_RELATION_CLEARED("itsUC_MonitorFillLevel");
-    itsUC_MonitorFillLevel = NULL;
 }
 
 void UC_SortGarbage::rootState_entDef(void) {
@@ -140,7 +96,6 @@ IOxfReactive::TakeEventStatus UC_SortGarbage::rootState_processEvent(void) {
         {
             if(IS_EVENT_TYPE_OF(evStartSorting_SGCS_USECASE_id) == 1)
                 {
-                    OMSETPARAMS(evStartSorting);
                     NOTIFY_TRANSITION_STARTED("6");
                     NOTIFY_STATE_EXITED("ROOT.WaitForSorting");
                     NOTIFY_STATE_ENTERED("ROOT.Sorting");
@@ -148,7 +103,7 @@ IOxfReactive::TakeEventStatus UC_SortGarbage::rootState_processEvent(void) {
                     rootState_subState = Sorting;
                     rootState_active = Sorting;
                     //#[ state Sorting.(Entry) 
-                    setRecyclable(params->getRecyclable());
+                    setRecyclable(1);
                     //#]
                     NOTIFY_TRANSITION_TERMINATED("6");
                     res = eventConsumed;
@@ -208,6 +163,9 @@ IOxfReactive::TakeEventStatus UC_SortGarbage::rootState_processEvent(void) {
                     NOTIFY_TRANSITION_STARTED("3");
                     popNullTransition();
                     NOTIFY_STATE_EXITED("ROOT.AddRecyclable");
+                    //#[ transition 5 
+                    showBinStaus();
+                    //#]
                     NOTIFY_STATE_ENTERED("ROOT.WaitForSorting");
                     rootState_subState = WaitForSorting;
                     rootState_active = WaitForSorting;
@@ -225,6 +183,9 @@ IOxfReactive::TakeEventStatus UC_SortGarbage::rootState_processEvent(void) {
                     NOTIFY_TRANSITION_STARTED("4");
                     popNullTransition();
                     NOTIFY_STATE_EXITED("ROOT.AddNonRecyclable");
+                    //#[ transition 5 
+                    showBinStaus();
+                    //#]
                     NOTIFY_STATE_ENTERED("ROOT.WaitForSorting");
                     rootState_subState = WaitForSorting;
                     rootState_active = WaitForSorting;
@@ -246,14 +207,6 @@ void OMAnimatedUC_SortGarbage::serializeAttributes(AOMSAttributes* aomsAttribute
     aomsAttributes->addAttribute("recyclable", x2String(myReal->recyclable));
     aomsAttributes->addAttribute("recyclableBin", x2String(myReal->recyclableBin));
     aomsAttributes->addAttribute("nonRecyclableBin", x2String(myReal->nonRecyclableBin));
-}
-
-void OMAnimatedUC_SortGarbage::serializeRelations(AOMSRelations* aomsRelations) const {
-    aomsRelations->addRelation("itsUC_MonitorFillLevel", false, true);
-    if(myReal->itsUC_MonitorFillLevel)
-        {
-            aomsRelations->ADD_ITEM(myReal->itsUC_MonitorFillLevel);
-        }
 }
 
 void OMAnimatedUC_SortGarbage::rootState_serializeStates(AOMSState* aomsState) const {

@@ -12,8 +12,8 @@
 			<_id type="a">GUID 820ae8c3-60ba-49a6-b836-fc9fa20dc861</_id>
 			<_myState type="a">139264</_myState>
 			<_name type="a">DefaultComponent</_name>
-			<_modifiedTimeWeak type="a">7.16.2023::13:37:23</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.16.2023::13:37:23</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.16.2023::18:12:24</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::18:12:24</_modifiedTime>
 			<m_buildType type="a">Executable</m_buildType>
 			<m_configActive type="r">
 				<ICodeGenConfigInfoHandle type="e">
@@ -73,7 +73,7 @@
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
 			</SelectedVariants>
-			<weakCGTime type="a">7.16.2023::13:37:23</weakCGTime>
+			<weakCGTime type="a">7.16.2023::18:12:24</weakCGTime>
 			<strongCGTime type="a">7.16.2023::0:11:51</strongCGTime>
 			<AggregatesList type="e">
 				<value>GUID 444b19f4-3a85-4214-af74-419efca750dc</value>
@@ -99,8 +99,8 @@
 			<_id type="a">GUID 65a3a3c8-688a-4d1c-9220-3b78d2719c39</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">DefaultConfig</_name>
-			<_modifiedTimeWeak type="a">7.16.2023::13:37:23</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.16.2023::13:37:23</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.16.2023::18:12:24</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::18:12:24</_modifiedTime>
 			<_scopeType type="a">Explicit</_scopeType>
 			<_instrumentation type="a">Animation</_instrumentation>
 			<_timeModel type="a">RealTime</_timeModel>
@@ -119,22 +119,13 @@
 							<_hm2Class type="a">IClass</_hm2Class>
 							<_hfilename type="a">.\SGCS_USECASE.sbsx</_hfilename>
 							<_hsubsystem type="a">SGCS_USECASE</_hsubsystem>
-							<_hname type="a">UC_MonitorFillLevel</_hname>
-							<_hid type="a">GUID 522b14f2-a9d5-40ea-ad5e-701854edb1d9</_hid>
-						</IHandle>
-					
-					
-						<IHandle type="e">
-							<_hm2Class type="a">IClass</_hm2Class>
-							<_hfilename type="a">.\SGCS_USECASE.sbsx</_hfilename>
-							<_hsubsystem type="a">SGCS_USECASE</_hsubsystem>
-							<_hname type="a">UC_SortGarbage</_hname>
-							<_hid type="a">GUID 22686d7b-5db4-4207-b305-372c73c55fd8</_hid>
+							<_hname type="a">UC_Littering</_hname>
+							<_hid type="a">GUID 918f403c-e5fa-4007-9868-de8a224faf4f</_hid>
 						</IHandle>
 					
 				</IRPYRawContainer>
 			</InitialInstances>
-			<weakCGTime type="a">7.16.2023::13:37:23</weakCGTime>
+			<weakCGTime type="a">7.16.2023::18:12:24</weakCGTime>
 			<strongCGTime type="a">7.16.2023::0:22:1</strongCGTime>
 			<AnimScopeElements type="c">
 				<IRPYRawContainer type="e">

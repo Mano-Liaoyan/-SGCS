@@ -25,9 +25,6 @@
 #include <state.h>
 //## auto_generated
 #include <event.h>
-//## link itsUC_MonitorFillLevel
-class UC_MonitorFillLevel;
-
 //## package SGCS_USECASE
 
 //## class UC_SortGarbage
@@ -46,7 +43,12 @@ public :
     explicit UC_SortGarbage(IOxfActive* const theActiveContext = NULL);
     
     //## auto_generated
-    ~UC_SortGarbage(void);
+    virtual ~UC_SortGarbage(void);
+    
+    ////    Operations    ////
+    
+    //## operation showBinStaus()
+    virtual void showBinStaus(void);
     
     ////    Additional operations    ////
     
@@ -69,21 +71,12 @@ public :
     void setRecyclableBin(const int p_recyclableBin);
     
     //## auto_generated
-    const UC_MonitorFillLevel* getItsUC_MonitorFillLevel(void) const;
-    
-    //## auto_generated
-    void setItsUC_MonitorFillLevel(UC_MonitorFillLevel* const p_UC_MonitorFillLevel);
-    
-    //## auto_generated
     virtual bool startBehavior(void);
 
 protected :
 
     //## auto_generated
     void initStatechart(void);
-    
-    //## auto_generated
-    void cleanUpRelations(void);
     
     ////    Attributes    ////
 
@@ -95,23 +88,10 @@ private :
     
     int recyclableBin;		//## attribute recyclableBin
     
-    ////    Relations and components    ////
-    
-    UC_MonitorFillLevel* itsUC_MonitorFillLevel;		//## link itsUC_MonitorFillLevel
-    
     ////    Framework operations    ////
 
 public :
 
-    //## auto_generated
-    void __setItsUC_MonitorFillLevel(UC_MonitorFillLevel* const p_UC_MonitorFillLevel);
-    
-    //## auto_generated
-    void _setItsUC_MonitorFillLevel(UC_MonitorFillLevel* const p_UC_MonitorFillLevel);
-    
-    //## auto_generated
-    void _clearItsUC_MonitorFillLevel(void);
-    
     // rootState:
     //## statechart_method
     inline RhpBoolean rootState_IN(void) const;
@@ -171,8 +151,6 @@ class OMAnimatedUC_SortGarbage : virtual public AOMInstance {
 public :
 
     virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
-    
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
     
     //## statechart_method
     void rootState_serializeStates(AOMSState* aomsState) const;

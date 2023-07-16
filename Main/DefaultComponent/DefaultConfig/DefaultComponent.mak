@@ -96,6 +96,7 @@ OBJS= \
   Garbage.obj \
   UC_MonitorFillLevel.obj \
   UC_SortGarbage.obj \
+  UC_Littering.obj \
   SystemManager.obj \
   User.obj \
   Default.obj \
@@ -212,7 +213,7 @@ GarbageBin.obj : GarbageBin.cpp GarbageBin.h    Default.h SGCS.h
 
 
 
-Enviroment.obj : Enviroment.cpp Enviroment.h    Default.h SGCS.h 
+Enviroment.obj : Enviroment.cpp Enviroment.h    Default.h SGCS.h UC_Littering.h UC_MonitorFillLevel.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Enviroment.obj" "Enviroment.cpp" 
 
@@ -248,6 +249,12 @@ UC_SortGarbage.obj : UC_SortGarbage.cpp UC_SortGarbage.h    SGCS_USECASE.h
 
 
 
+UC_Littering.obj : UC_Littering.cpp UC_Littering.h    SGCS_USECASE.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UC_Littering.obj" "UC_Littering.cpp" 
+
+
+
 SystemManager.obj : SystemManager.cpp SystemManager.h    SGCS_USECASE.h User.h SGCS.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"SystemManager.obj" "SystemManager.cpp" 
@@ -266,7 +273,7 @@ Default.obj : Default.cpp Default.h    SGCS.h CommunicationSystem.h CloudPlatfor
 
 
 
-SGCS_USECASE.obj : SGCS_USECASE.cpp SGCS_USECASE.h    UC_MonitorFillLevel.h UC_SortGarbage.h 
+SGCS_USECASE.obj : SGCS_USECASE.cpp SGCS_USECASE.h    UC_MonitorFillLevel.h UC_SortGarbage.h UC_Littering.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"SGCS_USECASE.obj" "SGCS_USECASE.cpp" 
 
@@ -310,6 +317,7 @@ clean:
 	if exist Garbage.obj erase Garbage.obj
 	if exist UC_MonitorFillLevel.obj erase UC_MonitorFillLevel.obj
 	if exist UC_SortGarbage.obj erase UC_SortGarbage.obj
+	if exist UC_Littering.obj erase UC_Littering.obj
 	if exist SystemManager.obj erase SystemManager.obj
 	if exist User.obj erase User.obj
 	if exist Default.obj erase Default.obj

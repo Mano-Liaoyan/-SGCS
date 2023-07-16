@@ -18,38 +18,19 @@
 //## auto_generated
 #include <event.h>
 //## auto_generated
+class UC_Littering;
+
+//## auto_generated
 class UC_MonitorFillLevel;
 
-//## classInstance itsUC_SortGarbage
+//## auto_generated
 class UC_SortGarbage;
 
 //## package SGCS_USECASE
 
 
-//## classInstance itsUC_SortGarbage
-extern UC_SortGarbage itsUC_SortGarbage;
 
-//## auto_generated
-void SGCS_USECASE_initRelations(void);
-
-//## auto_generated
-bool SGCS_USECASE_startBehavior(void);
-
-//#[ ignore
-class SGCS_USECASE_OMInitializer {
-    ////    Constructors and destructors    ////
-    
-public :
-
-    //## auto_generated
-    SGCS_USECASE_OMInitializer(void);
-    
-    //## auto_generated
-    ~SGCS_USECASE_OMInitializer(void);
-};
-//#]
-
-//## event evStartLittering(int,bool)
+//## event evStartLittering()
 class evStartLittering : public OMEvent {
     ////    Friends    ////
     
@@ -63,31 +44,6 @@ public :
     
     //## auto_generated
     evStartLittering(void);
-    
-    //## auto_generated
-    evStartLittering(const int p_v, const bool p_recyclable);
-    
-    ////    Additional operations    ////
-    
-    //## auto_generated
-    int getV(void) const;
-    
-    //## auto_generated
-    void setV(const int p_v);
-    
-    //## auto_generated
-    bool getRecyclable(void) const;
-    
-    //## auto_generated
-    void setRecyclable(const bool p_recyclable);
-    
-    ////    Framework    ////
-
-private :
-
-    int v;		//## auto_generated
-    
-    bool recyclable;		//## auto_generated
 };
 
 #ifdef _OMINSTRUMENT
@@ -102,7 +58,7 @@ class OMAnimatedevStartLittering : virtual public AOMEvent {
 extern const IOxfEvent::ID evStartLittering_SGCS_USECASE_id;
 //#]
 
-//## event evStartSorting(bool)
+//## event evStartSorting()
 class evStartSorting : public OMEvent {
     ////    Friends    ////
     
@@ -116,23 +72,6 @@ public :
     
     //## auto_generated
     evStartSorting(void);
-    
-    //## auto_generated
-    evStartSorting(const bool p_recyclable);
-    
-    ////    Additional operations    ////
-    
-    //## auto_generated
-    bool getRecyclable(void) const;
-    
-    //## auto_generated
-    void setRecyclable(const bool p_recyclable);
-    
-    ////    Framework    ////
-
-private :
-
-    bool recyclable;		//## auto_generated
 };
 
 #ifdef _OMINSTRUMENT
@@ -145,6 +84,62 @@ class OMAnimatedevStartSorting : virtual public AOMEvent {
 
 //#[ ignore
 extern const IOxfEvent::ID evStartSorting_SGCS_USECASE_id;
+//#]
+
+//## event evLitterGenerated()
+class evLitterGenerated : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedevLitterGenerated;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    evLitterGenerated(void);
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedevLitterGenerated : virtual public AOMEvent {
+    DECLARE_META_EVENT(evLitterGenerated)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//#[ ignore
+extern const IOxfEvent::ID evLitterGenerated_SGCS_USECASE_id;
+//#]
+
+//## event evOverfill()
+class evOverfill : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedevOverfill;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    evOverfill(void);
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedevOverfill : virtual public AOMEvent {
+    DECLARE_META_EVENT(evOverfill)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//#[ ignore
+extern const IOxfEvent::ID evOverfill_SGCS_USECASE_id;
 //#]
 
 #endif

@@ -11,30 +11,15 @@
 //## auto_generated
 #include "MainDefaultComponent.h"
 //## auto_generated
-#include "Default.h"
-//## auto_generated
-#include "SGCS_USECASE.h"
-//## auto_generated
-#include "UC_MonitorFillLevel.h"
-//## auto_generated
-#include "UC_SortGarbage.h"
-DefaultComponent::DefaultComponent(void) {
-    SGCS_USECASE_initRelations();
-    (void) SGCS_USECASE_startBehavior();
-}
-
+#include "UC_Littering.h"
 RhpInteger main( void) {
     RhpInteger status = 0;
     try {
         if(OXF::initialize(0,NULL))
             {
-                UC_MonitorFillLevel p_UC_MonitorFillLevel;
-                p_UC_MonitorFillLevel.setShouldDelete(false);
-                UC_SortGarbage p_UC_SortGarbage;
-                p_UC_SortGarbage.setShouldDelete(false);
-                DefaultComponent initializer_DefaultComponent;
-                (void) p_UC_MonitorFillLevel.startBehavior();
-                (void) p_UC_SortGarbage.startBehavior();
+                UC_Littering p_UC_Littering;
+                p_UC_Littering.setShouldDelete(false);
+                (void) p_UC_Littering.startBehavior();
                 //#[ configuration DefaultComponent::DefaultConfig 
                 //#]
                 OXF::start();

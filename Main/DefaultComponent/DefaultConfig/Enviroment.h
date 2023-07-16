@@ -17,13 +17,25 @@
 #include <aom.h>
 //## auto_generated
 #include "Default.h"
+//## auto_generated
+#include <omthread.h>
+//## auto_generated
+#include <omreactive.h>
+//## auto_generated
+#include <state.h>
+//## auto_generated
+#include <event.h>
+//## classInstance LitteringA
+#include "UC_Littering.h"
+//## classInstance binA
+#include "UC_MonitorFillLevel.h"
 //## link itsSGCS
 class SGCS;
 
 //## package Default
 
 //## class Enviroment
-class Enviroment {
+class Enviroment : public OMReactive {
     ////    Friends    ////
     
 public :
@@ -35,7 +47,7 @@ public :
     ////    Constructors and destructors    ////
     
     //## auto_generated
-    Enviroment(void);
+    explicit Enviroment(IOxfActive* const theActiveContext = NULL);
     
     //## auto_generated
     ~Enviroment(void);
@@ -43,10 +55,31 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
+    const UC_Littering* getLitteringA(void) const;
+    
+    //## auto_generated
+    const UC_Littering* getLitteringB(void) const;
+    
+    //## auto_generated
+    const UC_Littering* getLitteringC(void) const;
+    
+    //## auto_generated
+    const UC_MonitorFillLevel* getBinA(void) const;
+    
+    //## auto_generated
+    const UC_MonitorFillLevel* getBinB(void) const;
+    
+    //## auto_generated
+    const UC_MonitorFillLevel* getBinC(void) const;
+    
+    //## auto_generated
     const SGCS* getItsSGCS(void) const;
     
     //## auto_generated
     void setItsSGCS(SGCS* const p_SGCS);
+    
+    //## auto_generated
+    virtual bool startBehavior(void);
 
 protected :
 
@@ -57,6 +90,18 @@ protected :
 
 private :
 
+    UC_Littering LitteringA;		//## classInstance LitteringA
+    
+    UC_Littering LitteringB;		//## classInstance LitteringB
+    
+    UC_Littering LitteringC;		//## classInstance LitteringC
+    
+    UC_MonitorFillLevel binA;		//## classInstance binA
+    
+    UC_MonitorFillLevel binB;		//## classInstance binB
+    
+    UC_MonitorFillLevel binC;		//## classInstance binC
+    
     SGCS* itsSGCS;		//## link itsSGCS
     
     ////    Framework operations    ////
@@ -71,6 +116,12 @@ public :
     
     //## auto_generated
     void _clearItsSGCS(void);
+    
+    //## auto_generated
+    void setActiveContext(IOxfActive* const theActiveContext, bool activeInstance);
+    
+    //## auto_generated
+    virtual void destroy(void);
 };
 
 #ifdef _OMINSTRUMENT

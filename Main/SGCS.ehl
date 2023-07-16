@@ -1,8 +1,8 @@
 [Op Calls]
 [Events]
-UC_MonitorFillLevel[0]->GEN(evStartLittering(5,true))`UC_MonitorFillLevel
-UC_MonitorFillLevel[0]->GEN(evStartLittering())`UC_MonitorFillLevel
-itsUC_SortGarbage->GEN(evStartSorting(0))`UC_SortGarbage
-UC_MonitorFillLevel[0]->GEN(evStartLittering(10,true))`UC_MonitorFillLevel
-UC_SortGarbage[1]->GEN(evStartSorting(false))`UC_SortGarbage
+Enviroment[0]->binA->GEN(evLitterGenerated())`UC_MonitorFillLevel
+Enviroment[0]->LitteringA->GEN(evLitterGenerated())`UC_Littering
+Enviroment[0]->LitteringA->GEN(evStartLittering())`UC_Littering
+binA->GEN(evStartLittering(5,false))`UC_MonitorFillLevel
+binB->GEN(evStartLittering(10,false))`UC_MonitorFillLevel
 [Breakpoints]

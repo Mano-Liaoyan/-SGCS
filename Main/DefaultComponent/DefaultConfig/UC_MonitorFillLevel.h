@@ -25,13 +25,10 @@
 #include <state.h>
 //## auto_generated
 #include <event.h>
-//## link itsUC_SortGarbage
-class UC_SortGarbage;
-
 //## package SGCS_USECASE
 
 //## class UC_MonitorFillLevel
-class UC_MonitorFillLevel : public OMReactive {
+class UC_MonitorFillLevel : public OMThread, public OMReactive {
     ////    Friends    ////
     
 public :
@@ -43,7 +40,7 @@ public :
     ////    Constructors and destructors    ////
     
     //## auto_generated
-    explicit UC_MonitorFillLevel(IOxfActive* const theActiveContext = NULL);
+    UC_MonitorFillLevel(void);
     
     //## auto_generated
     virtual ~UC_MonitorFillLevel(void);
@@ -83,21 +80,12 @@ public :
     void setVolume(const int p_volume);
     
     //## auto_generated
-    const UC_SortGarbage* getItsUC_SortGarbage(void) const;
-    
-    //## auto_generated
-    void setItsUC_SortGarbage(UC_SortGarbage* const p_UC_SortGarbage);
-    
-    //## auto_generated
     virtual bool startBehavior(void);
 
 protected :
 
     //## auto_generated
     void initStatechart(void);
-    
-    //## auto_generated
-    void cleanUpRelations(void);
     
     ////    Attributes    ////
 
@@ -111,30 +99,17 @@ private :
     
     int volume;		//## attribute volume
     
-    ////    Relations and components    ////
-    
-    UC_SortGarbage* itsUC_SortGarbage;		//## link itsUC_SortGarbage
-    
     ////    Framework operations    ////
 
 public :
 
-    //## auto_generated
-    void __setItsUC_SortGarbage(UC_SortGarbage* const p_UC_SortGarbage);
-    
-    //## auto_generated
-    void _setItsUC_SortGarbage(UC_SortGarbage* const p_UC_SortGarbage);
-    
-    //## auto_generated
-    void _clearItsUC_SortGarbage(void);
-    
     // rootState:
     //## statechart_method
     inline RhpBoolean rootState_IN(void) const;
     
-    // WaitForLittering:
+    // WaitForDetecting:
     //## statechart_method
-    inline RhpBoolean WaitForLittering_IN(void) const;
+    inline RhpBoolean WaitForDetecting_IN(void) const;
     
     // UpdateFillLevel:
     //## statechart_method
@@ -165,7 +140,7 @@ protected :
 //#[ ignore
     enum UC_MonitorFillLevel_Enum {
         OMNonState = 0,
-        WaitForLittering = 1,
+        WaitForDetecting = 1,
         UpdateFillLevel = 2,
         ShowFillLevel = 3,
         FillOverFlow = 4,
@@ -193,13 +168,11 @@ public :
 
     virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
     
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
-    
     //## statechart_method
     void rootState_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void WaitForLittering_serializeStates(AOMSState* aomsState) const;
+    void WaitForDetecting_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
     void UpdateFillLevel_serializeStates(AOMSState* aomsState) const;
@@ -220,8 +193,8 @@ inline RhpBoolean UC_MonitorFillLevel::rootState_IN(void) const {
     return true;
 }
 
-inline RhpBoolean UC_MonitorFillLevel::WaitForLittering_IN(void) const {
-    return rootState_subState == WaitForLittering;
+inline RhpBoolean UC_MonitorFillLevel::WaitForDetecting_IN(void) const {
+    return rootState_subState == WaitForDetecting;
 }
 
 inline RhpBoolean UC_MonitorFillLevel::UpdateFillLevel_IN(void) const {
